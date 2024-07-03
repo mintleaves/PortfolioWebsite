@@ -4,15 +4,17 @@ import Navbar from "./components/Navbar/Navbar"
 const App = () => {
   return (
     <>
-     <section>
+     <section id="Home">
         <Navbar />
      </section>
-     <section>Skills</section>
+     <section id="About">About</section>
+     <section id="Skills">Skills</section>
+     <section id="Work">Parallax</section>     
      <section>Project1</section>
      <section>Project2</section>
      <section>Project3</section>
-     <section>Testimonials</section>     
-     <section>Parallax</section>     
+     <section id="Testimonials">Testimonials</section>     
+     <section id="Contact">Parallax</section>     
      <section>Contact</section>
     </>
   )
