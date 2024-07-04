@@ -1,6 +1,5 @@
 .hero {
   height: calc(100vh - 90px);
-  // background: linear-gradient(180deg, #0c0c1d, #272727);
   display: flex;
   max-width: 1366px;
   height: 100%;
@@ -66,5 +65,9 @@
         }
       }
     }
+  }
+
+  .threed_container {
+    width: 50%;
   }
 }
