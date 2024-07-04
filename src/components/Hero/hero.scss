@@ -1,0 +1,70 @@
+.hero {
+  height: calc(100vh - 90px);
+  // background: linear-gradient(180deg, #0c0c1d, #272727);
+  display: flex;
+  max-width: 1366px;
+  height: 100%;
+  margin: auto;
+
+  .text_container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+
+    h2 {
+      font-size: 30px;
+      letter-spacing: 10px;
+      color: #8f9296;
+    }
+    h1 {
+      font-size: 70px;
+    }
+
+    .button_scroll_wrapper {
+       
+      .buttons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        button {
+          padding: 20px 30px;
+          border: 2px solid #8f9296;
+          border-radius: 50px;
+          background: transparent;
+          color: white;
+        }
+      }
+
+      .scroll_wrapper {
+        position: relative;
+        .scroll_animation {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .scroll_icon {
+          width: 35px;
+          height: 65px;
+          border-radius: 20px;
+          border: 2px solid #8f9296;
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          padding: 6px;
+
+          .scroll_icon_circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8f9296;
+          }
+        }
+      }
+    }
+  }
+}
