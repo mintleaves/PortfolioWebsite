@@ -14,7 +14,7 @@ const Navbar = () => {
             animate={{ opacity: 1, scale: 1 }}
             transitiion={{ duration: 0.5 }}
           >
-            MintLeaves.
+             &lt;GrubHTML&#47;&gt;
           </motion.span>
           <div className="social">
             <a href="">

@@ -1,0 +1,25 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  .text_container {
+    h2 {
+      font-size: 25px;
+      color: #8f9296;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: bolder;
+      color: white;
+      margin: 1rem 0;
+    }
+    p {
+      color: #8f9296;
+      font-size: 25px;
+      letter-spacing: 1.5px;
+    }
+  }
+}
