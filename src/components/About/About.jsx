@@ -34,8 +34,8 @@ const About = () => {
     <div className="about" ref={ref}>
       <motion.div className="text_container" variants={textVariants}   initial="hidden"
         animate={controls}>
-        <motion.h2>INTRODUCTION</motion.h2>
-        <motion.h1>Overview.</motion.h1>
+        {/* <motion.h2>INTRODUCTION</motion.h2> */}
+        <motion.h1>Introduction.</motion.h1>
         <motion.p>
         As a skilled software engineer proficient in JavaScript, React, and Node.js, I possess a strong foundation in Computer Science and Engineering, earned through my 2022 graduation. My knowledge of data structures and algorithms enables me to develop efficient and scalable solutions for complex challenges. I thrive in collaborative environments, delivering user-centric products by closely aligning with client needs.
         </motion.p>
