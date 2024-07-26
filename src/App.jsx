@@ -3,6 +3,8 @@ import About from "./components/About/About";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Skills from "./components/Skills/Skills";
+import Testimonial from "./components/Testimonials/Testimonial";
+import Works from "./components/Works/Works";
 
 const App = () => {
   return (
@@ -17,13 +19,12 @@ const App = () => {
       <section id="Skills">
         <Skills />
       </section>
-      <section id="Work">Parallax</section>
-      <section>Project1</section>
-      <section>Project2</section>
-      <section>Project3</section>
-      <section id="Testimonials">Testimonials</section>
-      <section id="Contact">Parallax</section>
-      <section>Contact</section>
+      <Works />
+      <section id="Testimonials">
+        <Testimonial />
+      </section>
+      {/* <section id="Contact">Parallax</section> */}
+      <section id="Contact">Contact</section>
     </>
   );
 };

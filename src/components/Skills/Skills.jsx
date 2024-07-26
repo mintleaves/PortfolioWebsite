@@ -5,7 +5,7 @@ import "./skills.scss";
 const Skills = () => {
   return (
     <motion.div className="skills">
-      <h1>Skills.</h1>
+      <h1>Skills__</h1>
       <div className="skills_card_container">
         <div className="skill_card">
           <img src="./html.png" alt="html" />
