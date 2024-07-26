@@ -1,3 +1,60 @@
 .testimonial {
+  height: 100%;
+
+  h1 {
+    font-size: 60px;
+    font-weight: bolder;
+    color: white;
+    margin: 1rem 0;
+  }
+
+  .reviews_container {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .review {
+      padding: 2rem 4rem;
     
+      .client_desc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 400px);
+        width: 1000px;
+        p {
+          font-size: 30px;
+          color: #8f9296;
+          letter-spacing: 1.5px;
+          line-height: 50px;
+          span {
+            font-size: 110px;
+          }
+        }
+      }
+
+      .client_info {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        img {
+          height: 50px;
+          border: 2px solid rgb(255, 255, 255);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
 }
