@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import "./testimonial.scss";
 
 const items = [
@@ -99,17 +100,29 @@ const Testimonial = () => {
     );
   };
 
+  const scaleAnimation = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: { scale: 1, opacity: 1, transition: { duration: 0.5 } },
+  };
+
   return (
     <div className="testimonial">
       <h1>Testimonials__</h1>
 
       <div className="reviews_container">
-        <button onClick={handlePrev}><img src="./leftbtn.png" alt="leftbtn" /></button>
+        <button onClick={handlePrev}>
+          <img src="./leftbtn.png" alt="leftbtn" />
+        </button>
         <div className="review">
           <div className="client_desc">
-            <p>
-              <span>&#8220;</span> {items[currentIndex].statement}
-            </p>
+            <motion.p
+              key={currentIndex}
+              initial="hidden"
+              animate="visible"
+              variants={scaleAnimation}
+            >
+              <span id="quotion">&#8220;</span> {items[currentIndex].statement}
+            </motion.p>
           </div>
 
           <div className="client_info">
@@ -121,7 +134,9 @@ const Testimonial = () => {
             />
           </div>
         </div>
-        <button onClick={handleNext}><img src="./rightbtn.png" alt="rightbtn" /></button>
+        <button onClick={handleNext}>
+          <img src="./rightbtn.png" alt="rightbtn" />
+        </button>
       </div>
     </div>
   );

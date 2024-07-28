@@ -1,5 +1,6 @@
 import "./app.scss";
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Skills from "./components/Skills/Skills";
@@ -24,7 +25,9 @@ const App = () => {
         <Testimonial />
       </section>
       {/* <section id="Contact">Parallax</section> */}
-      <section id="Contact">Contact</section>
+      <section id="Contact">
+        <Contact />
+      </section>
     </>
   );
 };

@@ -36,7 +36,8 @@
           color: #8f9296;
           letter-spacing: 1.5px;
           line-height: 50px;
-          span {
+
+          #quotion {
             font-size: 110px;
           }
         }
@@ -48,6 +49,13 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
+
+        h3{
+          text-decoration: underline;
+          text-transform: capitalize;
+          color: #8f9296;
+
+        }
 
         img {
           height: 50px;
