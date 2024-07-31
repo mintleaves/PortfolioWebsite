@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import "./About.scss";
 
 const About = () => {
@@ -11,6 +12,30 @@ const About = () => {
         <br />
         <AboutFirstText />
       </div>
+      <motion.div className="animation_container">
+        <motion.div
+          className="ball"
+          // animate={{
+          //   y: ["20%", "100%", "0%"],
+          // }}
+          // transition={{
+          //   duration: 1,
+          //   repeat: Infinity,
+          //   repeatType: "reverse",
+          //   ease: "easeInOut",
+          // }}
+          animate={{
+            x: [10, 110, 10],
+            y: [0, 110, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
+        />
+      </motion.div>
     </div>
   );
 };

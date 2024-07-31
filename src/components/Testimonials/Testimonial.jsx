@@ -121,7 +121,7 @@ const Testimonial = () => {
               animate="visible"
               variants={scaleAnimation}
             >
-              <span id="quotion">&#8220;</span> {items[currentIndex].statement}
+              <span>&#8220;</span> {items[currentIndex].statement}
             </motion.p>
           </div>
 

@@ -53,8 +53,26 @@ const Hero = () => {
         animate="animate"
         variants={textVariants}
       >
-        <motion.button variants={textVariants}>My Works</motion.button>
-        <motion.button variants={textVariants}>Contact Me</motion.button>
+        <motion.button
+          variants={textVariants}
+          whileHover={{
+            scale: 1.1,
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+            boxShadow: "0px 0px 8px rgb(255,255,255)",
+          }}
+        >
+          My Works
+        </motion.button>
+        <motion.button
+          variants={textVariants}
+          whileHover={{
+            scale: 1.1,
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+            boxShadow: "0px 0px 8px rgb(255,255,255)",
+          }}
+        >
+          Contact Me
+        </motion.button>
       </motion.div>
       <motion.div
         className="scroll_animation"
@@ -66,7 +84,7 @@ const Hero = () => {
           <div className="scroll_icon">
             <motion.div
               animate={{
-                y: [0, 24, 0],
+                y: [0, 30, 0],
               }}
               transition={{
                 duration: 1.5,

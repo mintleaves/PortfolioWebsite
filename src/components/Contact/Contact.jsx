@@ -55,6 +55,7 @@ const Contact = () => {
       },
     },
   };
+
   return (
     <div className="contact">
       <h1>Contact Us__</h1>
@@ -66,12 +67,34 @@ const Contact = () => {
           variants={containerVariants}
         >
           <motion.div className="work_handle" variants={itemVariants}>
-            <div className="logo">
+            <motion.div
+              className="logo"
+              initial={{ "--x": "100%" }}
+              animate={{ "--x": "-100%" }}
+              whileTap={{ scale: 0.97 }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                repeatDelay: 1,
+                type: "spring",
+                stiffness: 20,
+                damping: 15,
+                mass: 2,
+              }}
+            >
               <h1>&lt;GrubHTML&#47;&gt;</h1>
-            </div>
-            <div className="projects">
-              <h2>Projects</h2>
-            </div>
+            </motion.div>
+
+            <motion.div className="projects">
+              <motion.h2
+                whileHover={{
+                  borderBottom: "2px solid white",
+                  transition: { duration: 0.3 },
+                }}
+              >
+                Projects
+              </motion.h2>
+            </motion.div>
             <div className="services">
               <h2>Services</h2>
               <div className="service_category">
@@ -88,19 +111,47 @@ const Contact = () => {
             animate="visible"
             variants={socialHandleVariants}
           >
-            <motion.a variants={itemVariants}>
+            <motion.a
+              variants={itemVariants}
+              whileHover={{
+                scale: 1.1,
+                textShadow: "0px 0px 8px rgb(255,255,255)",
+                boxShadow: "0px 0px 8px rgb(255,255,255)",
+              }}
+            >
               LinkedIn <img src="./up-arrow.png" alt="arrow icon" />
             </motion.a>
 
-            <motion.a variants={itemVariants}>
+            <motion.a
+              variants={itemVariants}
+              whileHover={{
+                scale: 1.1,
+                textShadow: "0px 0px 8px rgb(255,255,255)",
+                boxShadow: "0px 0px 8px rgb(255,255,255)",
+              }}
+            >
               Github <img src="./up-arrow.png" alt="arrow icon" />
             </motion.a>
 
-            <motion.a variants={itemVariants}>
+            <motion.a
+              variants={itemVariants}
+              whileHover={{
+                scale: 1.1,
+                textShadow: "0px 0px 8px rgb(255,255,255)",
+                boxShadow: "0px 0px 8px rgb(255,255,255)",
+              }}
+            >
               Dribble <img src="./up-arrow.png" alt="arrow icon" />
             </motion.a>
 
-            <motion.a variants={itemVariants}>
+            <motion.a
+              variants={itemVariants}
+              whileHover={{
+                scale: 1.1,
+                textShadow: "0px 0px 8px rgb(255,255,255)",
+                boxShadow: "0px 0px 8px rgb(255,255,255)",
+              }}
+            >
               Behance <img src="./up-arrow.png" alt="arrow icon" />
             </motion.a>
           </motion.div>
@@ -168,7 +219,15 @@ const Contact = () => {
               />
             </motion.div>
             <div className="form_btn">
-              <motion.button type="submit" variants={itemVariants}>
+              <motion.button
+                type="submit"
+                variants={itemVariants}
+                whileHover={{
+                  scale: 1.1,
+                  textShadow: "0px 0px 8px rgb(255,255,255)",
+                  boxShadow: "0px 0px 8px rgb(255,255,255)",
+                }}
+              >
                 Send <img src="./right-down.png" alt="" />
               </motion.button>
             </div>
