@@ -3,7 +3,7 @@ import "./About.scss";
 
 const About = () => {
   const secPartTexts =
-    "As a skilled software engineer proficient in JavaScript, React, and Node.js, We possess a strong foundation in Computer Science and Engineering, earned through my 2022 graduation. Our knowledge of data structures and algorithms enables us to develop efficient and scalable solutions for complex challenges. We thrive in collaborative environments, delivering user-centric products by closely aligning with client needs.";
+    "As a skilled software engineer proficient in JavaScript, React, and Node.js, We possess a strong foundation in Computer Science and Engineering, earned through our 2022 graduation. Our knowledge of data structures and algorithms enables us to develop efficient and scalable solutions for complex challenges. We thrive in collaborative environments, delivering user-centric products by closely aligning with client needs.";
   return (
     <div className="about">
       <h1>Introduction__</h1>
@@ -12,30 +12,16 @@ const About = () => {
         <br />
         <AboutFirstText />
       </div>
-      <motion.div className="animation_container">
-        <motion.div
-          className="ball"
-          // animate={{
-          //   y: ["20%", "100%", "0%"],
-          // }}
-          // transition={{
-          //   duration: 1,
-          //   repeat: Infinity,
-          //   repeatType: "reverse",
-          //   ease: "easeInOut",
-          // }}
-          animate={{
-            x: [10, 110, 10],
-            y: [0, 110, 0],
-          }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            repeatType: "reverse",
-            ease: "easeInOut",
-          }}
+
+      <div className="animation_container">
+        <motion.img
+          src="./building-website.svg"
+          alt="team image"
+          initial={{ x: -1300, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 50, damping: 20, duration: 5 }}
         />
-      </motion.div>
+      </div>
     </div>
   );
 };
