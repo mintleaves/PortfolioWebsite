@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import "./testimonial.scss";
 
 const items = [
@@ -86,6 +86,9 @@ const items = [
 ];
 
 const Testimonial = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
@@ -117,8 +120,9 @@ const Testimonial = () => {
           <div className="client_desc">
             <motion.p
               key={currentIndex}
+              ref={ref}
               initial="hidden"
-              animate="visible"
+              animate={isInView ? "visible" : "hidden"}
               variants={scaleAnimation}
             >
               <span>&#8220;</span> {items[currentIndex].statement}

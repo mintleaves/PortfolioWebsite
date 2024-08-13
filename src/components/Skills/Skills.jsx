@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import "./skills.scss";
 
 const skillVariants = {
@@ -24,13 +25,16 @@ const skillsVariants = {
   },
 };
 const Skills = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <div className="skills">
       <h1>Skills__</h1>
       <motion.div
+        ref={ref}
         className="skills_card_container"
         initial="hidden"
-        animate="visible"
+        animate={isInView ? "visible" : "hidden"}
         variants={skillsVariants}
       >
         <motion.div className="skill_card" variants={skillVariants}>

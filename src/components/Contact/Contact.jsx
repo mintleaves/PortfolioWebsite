@@ -1,9 +1,12 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 import "./contact.scss";
 
 const Contact = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -62,8 +65,9 @@ const Contact = () => {
       <motion.div className="contact_container">
         <motion.div
           className="intro_section"
+          ref={ref}
           initial="hidden"
-          animate="visible"
+          animate={isInView ? "visible" : "hidden"}
           variants={containerVariants}
         >
           <motion.div className="work_handle" variants={itemVariants}>
@@ -107,8 +111,9 @@ const Contact = () => {
           </motion.div>
           <motion.div
             className="social_handle"
+            ref={ref}
             initial="hidden"
-            animate="visible"
+            animate={isInView ? "visible" : "hidden"}
             variants={socialHandleVariants}
           >
             <motion.a
@@ -158,8 +163,9 @@ const Contact = () => {
         </motion.div>
         <motion.div
           className="mail_section"
+          ref={ref}
           initial="hidden"
-          animate="visible"
+          animate={isInView ? "visible" : "hidden"}
           variants={containerVariants}
         >
           <motion.form onSubmit={handleSubmit}>

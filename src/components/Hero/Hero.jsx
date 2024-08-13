@@ -7,11 +7,11 @@ import "./hero.scss";
 
 const textVariants = {
   initial: {
-    x: -500,
+    y: -800,
     opacity: 0,
   },
   animate: {
-    x: 0,
+    y: 0,
     opacity: 1,
     transition: {
       duration: 1,
