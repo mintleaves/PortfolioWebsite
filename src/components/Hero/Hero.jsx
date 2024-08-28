@@ -36,44 +36,14 @@ const Hero = () => {
 
       {/* <h1>Drag & Zoom</h1> */}
       <h1>GrubHTML.com</h1>
-      <motion.div
-        className="text_container"
-        variants={textVariants}
-        initial="initial"
-        animate="animate"
-      >
-        {/* <motion.h2 variants={textVariants}>GrubHTML.com</motion.h2> */}
-        <motion.p variants={textVariants}>
-          Crafting animated visuals, UI design and Full-stack web apps
-        </motion.p>
-      </motion.div>
-      <motion.div
-        className="buttons"
-        initial="initial"
-        animate="animate"
-        variants={textVariants}
-      >
-        <motion.button
-          variants={textVariants}
-          whileHover={{
-            scale: 1.1,
-            textShadow: "0px 0px 8px rgb(255,255,255)",
-            boxShadow: "0px 0px 8px rgb(255,255,255)",
-          }}
-        >
-          My Works
-        </motion.button>
-        <motion.button
-          variants={textVariants}
-          whileHover={{
-            scale: 1.1,
-            textShadow: "0px 0px 8px rgb(255,255,255)",
-            boxShadow: "0px 0px 8px rgb(255,255,255)",
-          }}
-        >
-          Contact Me
-        </motion.button>
-      </motion.div>
+     
+      <div className="text_container">
+        <p>Crafting animated visuals, UI design and Full-stack web apps</p>
+      </div>
+      <div className="buttons">
+        <button>My Works</button>
+        <button>Contact Me</button>
+      </div>
       <motion.div
         className="scroll_animation"
         initial="initial"

@@ -1,0 +1,46 @@
+$breakpoint-xs: 375px; // Extra small devices (e.g., small phones)
+$breakpoint-sm: 576px; // Small devices (e.g., landscape phones)
+$breakpoint-md: 768px; // Medium devices (e.g., tablets)
+$breakpoint-lg: 992px; // Large devices (e.g., desktops)
+$breakpoint-xl: 1200px; // Extra large devices (e.g., large desktops)
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+    @media (min-width: $breakpoint-xs) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+}
+
+
+@include respond-to(xs) {
+  
+}
+
+@include respond-to(sm) {
+  
+}
+
+@include respond-to(md) {
+  
+}
+
+@include respond-to(lg) {
+  
+}

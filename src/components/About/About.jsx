@@ -10,10 +10,10 @@ const About = () => {
   return (
     <div className="about">
       <h1>Introduction__</h1>
-      <div className="text_container">
-        <AboutSecondText text={secPartTexts} />
+      <div className="text_container" ref={ref}>
+        <AboutSecondText isInView={isInView} text={secPartTexts} />
         <br />
-        <AboutFirstText />
+        <AboutFirstText isInView={isInView} />
       </div>
 
       <div className="animation_container">
@@ -43,15 +43,45 @@ const wrapTextInSpans = (text) => {
   ));
 };
 
-const AboutFirstText = () => {
+const AboutFirstText = ({ isInView }) => {
   const text =
     "With a passion for both software development and design, We have honed our 3D modeling skills using Blender and we're eager to explore AI applications. Our entrepreneurial spirit led to the founding of GrubHTML.com, where we have successfully completed freelance projects over the past two years. We are excited to leverage our skills and experience to bring your vision to life.";
 
-  return <p className="animation_texts">{wrapTextInSpans(text)}</p>;
+  return (
+    <motion.p
+      className="animation_texts"
+      initial={{ x: 100, opacity: 0 }}
+      animate={isInView ? { x: 0, opacity: 1 } : {}}
+      transition={{
+        type: "spring",
+        stiffness: 50,
+        damping: 20,
+        duration: 1,
+        delay: 0.3,
+      }}
+    >
+      {wrapTextInSpans(text)}{" "}
+    </motion.p>
+  );
 };
 
-const AboutSecondText = ({ text }) => {
-  return <p className="animation_texts">{wrapTextInSpans(text)}</p>;
+const AboutSecondText = ({ text, isInView }) => {
+  return (
+    <motion.p
+      className="animation_texts"
+      initial={{ x: -100, opacity: 0 }}
+      animate={isInView ? { x: 0, opacity: 1 } : {}}
+      transition={{
+        type: "spring",
+        stiffness: 50,
+        damping: 20,
+        duration: 1,
+        delay: 0.6,
+      }}
+    >
+      {wrapTextInSpans(text)}
+    </motion.p>
+  );
 };
 
 export default About;
