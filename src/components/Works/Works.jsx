@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import "./works.scss";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useInView } from "framer-motion";
 
 const items = [
   {
@@ -34,21 +34,41 @@ const items = [
 ];
 
 const Singlework = ({ item }) => {
-  const ref = useRef();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
   return (
     <section>
-      <div className="container">
-        <div className="wrapper">
-          <div className="imgContainer" ref={ref}>
+      <div className="container" ref={ref}>
+        {/* <div className="wrapper"> */}
+          <motion.div
+            className="imgContainer"
+            isInView={isInView}
+            initial={{ x: 100, opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : {}}
+            transition={{
+              type: "spring",
+              stiffness: 50,
+              damping: 20,
+              duration: 1,
+              delay: 0.1,
+            }}
+          >
             <img src={item.img} alt="project image" />
-          </div>
-          <motion.div className="textContainer" style={{ y }}>
+          </motion.div>
+          <motion.div
+            className="textContainer"
+            isInView={isInView}
+            initial={{ x: -100, opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : {}}
+            transition={{
+              type: "spring",
+              stiffness: 50,
+              damping: 20,
+              duration: 1,
+              delay: 0.4,
+            }}
+          >
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <div className="tech_container">
@@ -61,12 +81,12 @@ const Singlework = ({ item }) => {
               <button>Code</button>
             </div>
           </motion.div>
-        </div>
+        {/* </div> */}
       </div>
     </section>
   );
 };
-const Works = () => {
+const Works = ({ id }) => {
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -77,7 +97,7 @@ const Works = () => {
     damping: 30,
   });
   return (
-    <div className="works" ref={ref}>
+    <div className="works" ref={ref} id={id}>
       <div className="progress">
         <h1>Featured Works__</h1>
         <motion.div

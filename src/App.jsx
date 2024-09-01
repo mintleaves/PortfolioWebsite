@@ -14,16 +14,13 @@ const App = () => {
         <Navbar />
         <Hero />
       </section>
-      {/* <section id="Homepage">
-        <Homepage />
-      </section> */}
       <section id="About">
         <About />
       </section>
       <section id="Skills">
         <Skills />
       </section>
-      <Works />
+      <Works id="Works"/>
       <section id="Testimonials">
         <Testimonial />
       </section>
