@@ -3,6 +3,22 @@
 .testimonial {
   height: 100%;
 
+  @include respond-to(xs) {
+    padding: 0 0.5rem;
+  }
+
+  @include respond-to(sm) {
+    padding: 0 0.6rem;
+  }
+
+  @include respond-to(md) {
+    padding: 0 0.7rem;
+  }
+
+  @include respond-to(lg) {
+    padding: 0;
+  }
+
   h1 {
     font-size: 28px;
     font-weight: bolder;
@@ -32,27 +48,33 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    // border: 2px solid red;
 
     @include respond-to(xs) {
-      gap: 1rem;
+      gap: .5rem;
+      // margin-top: 2.5rem;
     }
 
     @include respond-to(sm) {
       gap: 1.5rem;
+      // margin-top: 3.5rem;
     }
 
     @include respond-to(md) {
       gap: 2rem;
+      // margin-top: 4.5rem;
     }
 
     @include respond-to(lg) {
       gap: 2rem;
+      // margin-top: 5rem;
     }
 
     button {
       background: none;
       border: none;
       cursor: pointer;
+      // border: 2px solid red;
 
       img {
         @include respond-to(xs) {
@@ -61,22 +83,20 @@
 
         @include respond-to(sm) {
           height: 20px;
-
         }
 
         @include respond-to(md) {
           height: 25px;
-
         }
 
         @include respond-to(lg) {
           height: 30px;
-
         }
       }
     }
 
     .review {
+      // border: 1px solid yellow;
       @include respond-to(xs) {
         padding: 0.5rem 0.5rem;
       }

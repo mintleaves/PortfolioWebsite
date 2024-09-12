@@ -83,6 +83,12 @@ const items = [
     clientName: "weare360apparel",
     img: "./usa.png",
   },
+  {
+    id: 13,
+    statement: "Thanks again !",
+    clientName: "acejimbo",
+    img: "./canada.png",
+  },
 ];
 
 const Testimonial = () => {

@@ -9,14 +9,16 @@ const Sidebar = () => {
 
   const variants = {
     open: {
-        clipPath: "circle(1200px at 50px 50px)",
-        transition: {
-          type: "spring",
-          stiffness: 20,
-        },
+      // clipPath: "circle(1200px at 50px 50px)",
+      clipPath: "circle(1200px at calc(100% - 50px) 50px)",
+      transition: {
+        type: "spring",
+        stiffness: 20,
+      },
     },
     closed: {
-      clipPath: "circle(30px at 50px 45px)",
+      // clipPath: "circle(30px at 50px 45px)",
+      clipPath: "circle(30px at calc(100% - 50px) 45px)",
       transition: {
         delay: 0.5,
         type: "spring",

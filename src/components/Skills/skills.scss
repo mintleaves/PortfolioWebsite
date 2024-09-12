@@ -3,6 +3,22 @@
 .skills {
   height: 100%;
 
+  @include respond-to(xs) {
+    padding: 0 0.5rem;
+  }
+
+  @include respond-to(sm) {
+    padding: 0 0.6rem;
+  }
+
+  @include respond-to(md) {
+    padding: 0 0.7rem;
+  }
+
+  @include respond-to(lg) {
+    padding: 0;
+  }
+
   h1 {
     font-size: 28px;
     font-weight: bolder;
@@ -33,7 +49,19 @@
     gap: 3rem;
 
     @include respond-to(xs) {
+      margin-top: 2.5rem;
       gap: 1.5rem;
+    }
+    @include respond-to(sm) {
+      margin-top: 3.5rem;
+    }
+
+    @include respond-to(md) {
+      margin-top: 4.5rem;
+    }
+
+    @include respond-to(lg) {
+      margin-top: 5rem;
     }
 
     .skill_card {

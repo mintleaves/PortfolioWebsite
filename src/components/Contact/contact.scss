@@ -3,6 +3,22 @@
 .contact {
   height: 100%;
 
+    @include respond-to(xs) {
+    padding: 0 0.5rem;
+  }
+
+  @include respond-to(sm) {
+    padding: 0 0.6rem;
+  }
+
+  @include respond-to(md) {
+    padding: 0 0.7rem;
+  }
+
+  @include respond-to(lg) {
+    padding: 0;
+  }
+
   h1 {
     // font-size: 28px;
     font-weight: bolder;
@@ -28,17 +44,25 @@
 
   .contact_container {
     margin-top: 5rem;
-
     display: flex;
     flex-direction: column;
     gap: 2rem;
 
     position: relative;
 
+    @include respond-to(xs) {
+      margin-top: 2.5rem;
+    }
+
+    @include respond-to(sm) {
+      margin-top: 3.5rem;
+    }
+
     @include respond-to(md) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
+      margin-top: 4.5rem;
 
       // &::before {
       //   content: "";
@@ -56,6 +80,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
+      margin-top: 5rem;
 
       &::before {
         content: "";
@@ -70,7 +95,7 @@
     }
 
     .intro_section {
-      padding: 0.5rem;
+      // padding: 0.5rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -210,7 +235,7 @@
       }
     }
     .mail_section {
-      padding: 0.5rem;
+      // padding: 0.5rem;
       order: 1;
 
       @include respond-to(md) {
