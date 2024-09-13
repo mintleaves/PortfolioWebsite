@@ -2,21 +2,23 @@
 
 .about {
   height: 100%;
+  // min-height: 100vh;
+  // border: 2px solid red;
 
   @include respond-to(xs) {
-  padding: 0 .5rem;
+    padding: 0 0.5rem;
   }
-  
+
   @include respond-to(sm) {
-  padding: 0 .6rem;
+    padding: 0 0.6rem;
   }
-  
+
   @include respond-to(md) {
-  padding: 0 .7rem;
+    padding: 0 0.7rem;
   }
-  
+
   @include respond-to(lg) {
-  padding: 0;
+    padding: 0;
   }
 
   h1 {
@@ -41,77 +43,86 @@
       font-size: 60px;
     }
   }
-
-  .text_container {
-    // margin-top: 5rem;
-    height: 60%;
+  .wrapper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    // background-color: rgb(99, 3, 99);
 
-    @include respond-to(xs) {
-      margin: 2.5rem 0;
-    }
-
-    @include respond-to(sm) {
-      margin-top: 3.5rem;
-    }
-
-    @include respond-to(md) {
-      margin-top: 4.5rem;
-    }
-
-    @include respond-to(lg) {
-      margin-top: 5rem;
-    }
-
-    p {
-      color: #8f9296;
-      // letter-spacing: 2.5px;
+    .text_container {
+      // margin-top: 5rem;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      // border: 2px solid blue;
 
       @include respond-to(xs) {
-        font-size: 1rem;
-        line-height: 2rem;
-        letter-spacing: 0.09rem;
+        margin: 2.5rem 0;
       }
 
       @include respond-to(sm) {
-        font-size: 1.2rem;
-        line-height: 2.2rem;
+        margin-top: 3.5rem;
       }
+
       @include respond-to(md) {
-        font-size: 1.3rem;
-        line-height: 2.5rem;
+        margin-top: 4.5rem;
       }
+
       @include respond-to(lg) {
-        font-size: 1.563rem;
-        line-height: 3.125rem;
-        letter-spacing: 0.156rem;
+        margin-top: 5rem;
+      }
+
+      p {
+        color: #8f9296;
+        // letter-spacing: 2.5px;
+
+        @include respond-to(xs) {
+          font-size: 1rem;
+          line-height: 2rem;
+          letter-spacing: 0.09rem;
+        }
+
+        @include respond-to(sm) {
+          font-size: 1.2rem;
+          line-height: 2.2rem;
+        }
+        @include respond-to(md) {
+          font-size: 1.3rem;
+          line-height: 2.5rem;
+        }
+        @include respond-to(lg) {
+          font-size: 1.563rem;
+          line-height: 3.125rem;
+          letter-spacing: 0.156rem;
+        }
       }
     }
-  }
 
-  .animation_container {
-    border-bottom: 1px solid white;
-    height: 10rem;
-    display: flex;
-    justify-content: end;
-    align-items: end;
+    .animation_container {
+      border-bottom: 1px solid white;
+      height: 10rem;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      margin-top: auto;
+      // border: 2px solid yellow;
 
-    img {
-      @include respond-to(xs) {
-        height: 6rem;
-      }
-      @include respond-to(sm) {
-        height: 7rem;
-      }
+      img {
+        @include respond-to(xs) {
+          height: 6rem;
+        }
+        @include respond-to(sm) {
+          height: 7rem;
+        }
 
-      @include respond-to(md) {
-        height: 8rem;
-      }
+        @include respond-to(md) {
+          height: 8rem;
+        }
 
-      @include respond-to(lg) {
-        height: 10rem;
+        @include respond-to(lg) {
+          height: 10rem;
+        }
       }
     }
   }

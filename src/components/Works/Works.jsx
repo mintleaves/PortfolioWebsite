@@ -5,32 +5,36 @@ import { motion, useScroll, useSpring, useInView } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "Personal Portfolio",
-    img: "./portfolio.png",
-    desc: "We develop a personal portfolio which have three case studt where we implemented some more features.",
+    title: "Professional Portfolio",
+    img: "./raha1.png",
+    desc: "This website showcases the work of a product designer through homepage, about page and three detailed case studies: Dtail, TalentFirst, and UFit. The site features exceptional layouts, high-quality images, engaging videos, and dynamic animations. It is fully responsive, ensuring an optimal viewing experience across all devices.",
     tech: ["HTML", "CSS", "JS", "Bootstrap", "Figma"],
+    viewSite: ["https://rahayudesign.com/"],
   },
   {
     id: 2,
     title: "Tarkov Tracker",
-    img: "./tracker.jpg",
-    desc: "We develop a personal portfolio which have three case studt where we implemented some more features.",
-    tech: ["HTML", "CSS", "JS", "Bootstrap", "API"],
+    img: "./tarkov1.png",
+    desc: "This is a comprehensive tracking website for the popular game Escape from Tarkov. Our platform integrates Google AdSense and an ad blocker. It features automatic updates via API.The site is fully responsive and utilizes cookies to save update progress. With innovative color animations and a quest reset mechanism, users can enjoy a dynamic interface. Additionally, we support live streaming and offer manual language translation to cater to a global audience.",
+    tech: ["HTML", "CSS", "JS", "Bootstrap", "APIs"],
+    viewSite: ["https://tarkovtracker.ca/"],
   },
-  {
-    id: 3,
-    title: "Custom CRM",
-    img: "./dashboard.png",
-    desc: "We develop a personal portfolio which have three case studt where we implemented some more features.",
-    tech: ["HTML", "CSS", "JS", "PHP", "Bootstrap", "Laravel", "APIs"],
-  },
-  {
-    id: 4,
-    title: "Apparel Studio",
-    img: "./apparel.jpg",
-    desc: "We develop a personal portfolio which have three case studt where we implemented some more features.",
-    tech: ["HTML", "CSS", "Bootstrap", "MySQL"],
-  },
+  // {
+  //   id: 3,
+  //   title: "Custom CRM",
+  //   img: "./dashboard.png",
+  //   desc: "We develop a personal portfolio which have three case studt where we implemented some more features.",
+  //   tech: ["HTML", "CSS", "JS", "PHP", "Bootstrap", "Laravel", "APIs"],
+  //   viewSite: ["https://rahayudesign.com/"],
+  // },
+  // {
+  //   id: 4,
+  //   title: "Apparel Studio",
+  //   img: "./apparel.jpg",
+  //   desc: "We develop a personal portfolio which have three case studt where we implemented some more features.",
+  //   tech: ["HTML", "CSS", "Bootstrap", "MySQL"],
+  //   viewSite: ["https://rahayudesign.com/"],
+  // },
 ];
 
 const Singlework = ({ item }) => {
@@ -77,7 +81,7 @@ const Singlework = ({ item }) => {
               ))}
             </div>
             <div className="btn_container">
-              <button>View Site</button>
+              <button><a href={item.viewSite} target="_blank">View Site</a></button>
               <button>Code</button>
             </div>
           </motion.div>

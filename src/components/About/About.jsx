@@ -10,26 +10,28 @@ const About = () => {
   return (
     <div className="about">
       <h1>Introduction__</h1>
-      <div className="text_container" ref={ref}>
-        <AboutSecondText isInView={isInView} text={secPartTexts} />
-        <br />
-        <AboutFirstText isInView={isInView} />
-      </div>
+      <div className="wrapper">
+        <div className="text_container" ref={ref}>
+          <AboutSecondText isInView={isInView} text={secPartTexts} />
+          <br />
+          <AboutFirstText isInView={isInView} />
+        </div>
 
-      <div className="animation_container">
-        <motion.img
-          ref={ref}
-          src="./building-website.svg"
-          alt="team image"
-          initial={{ x: -1250, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : {}}
-          transition={{
-            type: "spring",
-            stiffness: 50,
-            damping: 20,
-            duration: 5,
-          }}
-        />
+        <div className="animation_container">
+          <motion.img
+            ref={ref}
+            src="./building-website.svg"
+            alt="team image"
+            initial={{ x: -1250, opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : {}}
+            transition={{
+              type: "spring",
+              stiffness: 50,
+              damping: 20,
+              duration: 5,
+            }}
+          />
+        </div>
       </div>
     </div>
   );
