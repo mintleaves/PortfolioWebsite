@@ -1,6 +1,11 @@
+@import "./components/_mixins.scss";
+
 html {
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+
+  @include respond-to(lg) {
+    scroll-snap-type: y mandatory;
+  }
 }
 * {
   padding: 0;
@@ -18,25 +23,31 @@ a {
   text-decoration: none;
   color: inherit;
 }
-section { 
-  height: 100vh;
-  scroll-snap-align: center;
-  margin-bottom: 10rem;
+section {
+  @include respond-to(xs) {
+    margin-bottom: 5rem;
+    // border: 3px solid red;
+  }
 
+  @include respond-to(sm) {
+    margin-bottom: 6rem;
+    // border: 3px solid blue;
 
-  // @include respond-to(xs) {
-  
-  // }
-  
-  // @include respond-to(sm) {
+  }
+
+  @include respond-to(md) {
+    scroll-snap-align: center;
+    height: 100vh;
+    margin-bottom: 8rem;
+    // border: 3px solid green;
+
+  }
+
+  @include respond-to(lg) {
+    scroll-snap-align: center;
+    height: 100vh;
+    margin-bottom: 10rem;
+    // border: 3px solid yellow;
     
-  // }
-  
-  // @include respond-to(md) {
-    
-  // }
-  
-  // @include respond-to(lg) {
-    
-  // }
+  }
 }

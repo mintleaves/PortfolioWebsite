@@ -10,8 +10,8 @@ const About = () => {
   return (
     <div className="about">
       <h1>Introduction__</h1>
-      <div className="wrapper">
-        <div className="text_container" ref={ref}>
+      <motion.div className="wrapper" ref={ref}>
+        <div className="text_container">
           <AboutSecondText isInView={isInView} text={secPartTexts} />
           <br />
           <AboutFirstText isInView={isInView} />
@@ -32,7 +32,7 @@ const About = () => {
             }}
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

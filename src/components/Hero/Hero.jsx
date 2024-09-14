@@ -42,7 +42,7 @@ const Hero = () => {
       </div>
       <div className="buttons">
         <button>My Works</button>
-        <button>Contact Me</button>
+        <button><a href="" target="_blank">Contact Me</a></button>
       </div>
       <motion.div
         className="scroll_animation"

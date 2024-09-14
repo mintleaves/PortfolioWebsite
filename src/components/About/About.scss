@@ -106,7 +106,22 @@
       justify-content: end;
       align-items: end;
       margin-top: auto;
-      // border: 2px solid yellow;
+     
+      // @include respond-to(xs) {
+  
+      // }
+      
+      // @include respond-to(sm) {
+        
+      // }
+      
+      // @include respond-to(md) {
+        
+      // }
+      
+      // @include respond-to(lg) {
+        
+      // }
 
       img {
         @include respond-to(xs) {
