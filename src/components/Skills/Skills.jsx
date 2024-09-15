@@ -1,6 +1,25 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 import "./skills.scss";
+
+const skillsIcon = [
+  { id: 1, iconName: "HTML", iconImg: "./html.png" },
+  { id: 2, iconName: "CSS", iconImg: "./css.png" },
+  { id: 3, iconName: "JavaScript", iconImg: "./js.png" },
+  { id: 4, iconName: "React", iconImg: "./react.png" },
+  { id: 5, iconName: "Node JS", iconImg: "./node.png" },
+  { id: 6, iconName: "Express JS", iconImg: "./express.png" },
+  { id: 7, iconName: "Mongo DB", iconImg: "./mongodb.png" },
+  { id: 8, iconName: "MySQL", iconImg: "./mysql.png" },
+  { id: 9, iconName: "Github", iconImg: "./githubSk.png" },
+  { id: 10, iconName: "SASS", iconImg: "./sass.png" },
+  { id: 11, iconName: "Tailwind", iconImg: "./tailwind.png" },
+  { id: 12, iconName: "Bootstrap", iconImg: "./bootstrap.png" },
+  { id: 13, iconName: "Material UI", iconImg: "./material.png" },
+  { id: 14, iconName: "Blender", iconImg: "./blender.png" },
+  { id: 15, iconName: "Figma", iconImg: "./figma.png" },
+];
 
 const skillVariants = {
   hidden: { opacity: 0, x: 50 },
@@ -30,74 +49,24 @@ const Skills = () => {
   return (
     <div className="skills">
       <h1>Skills__</h1>
-      <motion.div
-        ref={ref}
-        className="skills_card_container"
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={skillsVariants}
-      >
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./html.png" alt="html" />
-          <h4>HTML</h4>
+        <motion.div
+          ref={ref}
+          className="skills_card_container"
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={skillsVariants}
+        >
+          {skillsIcon.map((skill) => (
+            <motion.div
+              key={skill.id}
+              className="skill_card"
+              variants={skillVariants}
+            >
+              <img src={skill.iconImg} alt={skill.iconName} />
+              <h4>{skill.iconName}</h4>
+            </motion.div>
+          ))}
         </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./css.png" alt="css" />
-          <h4>CSS</h4>
-        </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./js.png" alt="js" />
-          <h4>JavaScript</h4>
-        </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./react.png" alt="react" />
-          <h4>React</h4>
-        </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./node.png" alt="nodejs" />
-          <h4>Node JS</h4>
-        </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./express.png" alt="express" />
-          <h4>Express JS</h4>
-        </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./mongodb.png" alt="mongodb" />
-          <h4>Mongo DB</h4>
-        </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./mysql.png" alt="mysql" />
-          <h4>MySQL</h4>
-        </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./githubSk.png" alt="github" />
-          <h4>Github</h4>
-        </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./sass.png" alt="sass" />
-          <h4>SASS</h4>
-        </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./tailwind.png" alt="tailwind" />
-          <h4>Tailwind</h4>
-        </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./bootstrap.png" alt="bootstrap" />
-          <h4>Bootstrap</h4>
-        </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./material.png" alt="material" />
-          <h4>Material UI</h4>
-        </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./blender.png" alt="blender" />
-          <h4>Blender</h4>
-        </motion.div>
-        <motion.div className="skill_card" variants={skillVariants}>
-          <img src="./figma.png" alt="figma" />
-          <h4>Figma</h4>
-        </motion.div>
-      </motion.div>
     </div>
   );
 };

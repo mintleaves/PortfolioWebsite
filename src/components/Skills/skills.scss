@@ -1,6 +1,8 @@
 @import "../_mixins.scss";
 
 .skills {
+  max-width: 1366px;
+  margin: auto;
   height: 100%;
 
   @include respond-to(xs) {
@@ -24,6 +26,7 @@
     font-weight: bolder;
     color: white;
     margin: 1rem 0;
+    // border: 2px solid;
 
     @include respond-to(xs) {
       font-size: 32px;
@@ -47,6 +50,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
+    // border: 2px solid;
 
     @include respond-to(xs) {
       margin-top: 2.5rem;

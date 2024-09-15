@@ -28,13 +28,12 @@ const Hero = () => {
           position: [10, -7.5, -5],
         }}
       >
-        <OrbitControls maxDistance={20} minDistance={10} />
+        <OrbitControls maxDistance={30} minDistance={10} enableZoom={false}/>
         <directionalLight />
         <pointLight position={[-30, 0, -30]} power={10.0} />
         <PointCircle />
       </Canvas>
 
-      {/* <h1>Drag & Zoom</h1> */}
       <h1>GrubHTML.com</h1>
      
       <div className="text_container">

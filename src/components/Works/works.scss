@@ -1,6 +1,8 @@
 @import "../_mixins.scss";
 
 .works {
+  max-width: 1366px;
+  margin: auto;
   position: relative;
  
   @include respond-to(xs) {
@@ -149,7 +151,7 @@
     }
 
     h2 {
-      font-size: 50px;
+      // font-size: 50px;
 
       @include respond-to(xs) {
         font-size: 25px;

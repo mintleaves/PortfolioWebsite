@@ -1,9 +1,11 @@
 @import "../_mixins.scss";
 
 .contact {
+  max-width: 1366px;
+  margin: auto;
   height: 100%;
 
-    @include respond-to(xs) {
+  @include respond-to(xs) {
     padding: 0 0.5rem;
   }
 
@@ -211,8 +213,11 @@
           text-decoration: none;
           transition: background 0.5s;
           margin: 0.2rem 0;
-          max-width: fit-content;
+          // max-width: fit-content;
+          display: flex;
+          gap: 10px;
           font-size: 0.8rem;
+          cursor: pointer;
 
           img {
             height: 1.2rem;

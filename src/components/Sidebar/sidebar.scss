@@ -42,25 +42,25 @@
       align-items: center;
       gap: 20px;
 
-      a {
-        font-size: 40px;
+      // a {
+      //   font-size: 40px;
 
-        @include respond-to(xs) {
-          font-size: 30px;
-        }
+      //   @include respond-to(xs) {
+      //     font-size: 30px;
+      //   }
 
-        @include respond-to(sm) {
-          font-size: 32px;
-        }
+      //   @include respond-to(sm) {
+      //     font-size: 32px;
+      //   }
 
-        @include respond-to(md) {
-          font-size: 35px;
-        }
+      //   @include respond-to(md) {
+      //     font-size: 35px;
+      //   }
 
-        @include respond-to(lg) {
-          font-size: 40px;
-        }
-      }
+      //   @include respond-to(lg) {
+      //     font-size: 40px;
+      //   }
+      // }
     }
   }
   button {

@@ -1,6 +1,8 @@
 @import "../_mixins.scss";
 
 .testimonial {
+  max-width: 1366px;
+  margin: auto;
   height: 100%;
 
   @include respond-to(xs) {

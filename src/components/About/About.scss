@@ -1,6 +1,8 @@
 @import "../_mixins.scss";
 
 .about {
+  max-width: 1366px;
+  margin: auto;
   height: 100%;
   // min-height: 100vh;
   // border: 2px solid red;
@@ -44,33 +46,31 @@
     }
   }
   .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    // background-color: rgb(99, 3, 99);
+    // border: 2px solid red;
 
     .text_container {
-      // margin-top: 5rem;
-      height: 60%;
       display: flex;
       flex-direction: column;
-      gap: 20px;
       // border: 2px solid blue;
 
       @include respond-to(xs) {
-        margin: 2.5rem 0;
+        margin-top: 2.5rem;
+        gap: 15px;
       }
 
       @include respond-to(sm) {
         margin-top: 3.5rem;
+        gap: 15px;
       }
 
       @include respond-to(md) {
         margin-top: 4.5rem;
+        gap: 18px;
       }
 
       @include respond-to(lg) {
         margin-top: 5rem;
+        gap: 20px;
       }
 
       p {
@@ -106,22 +106,7 @@
       justify-content: end;
       align-items: end;
       margin-top: auto;
-     
-      // @include respond-to(xs) {
-  
-      // }
-      
-      // @include respond-to(sm) {
-        
-      // }
-      
-      // @include respond-to(md) {
-        
-      // }
-      
-      // @include respond-to(lg) {
-        
-      // }
+      // border: 2px solid blue;
 
       img {
         @include respond-to(xs) {
@@ -138,6 +123,20 @@
         @include respond-to(lg) {
           height: 10rem;
         }
+      }
+    }
+
+    .animation_container {
+      display: none;
+    }
+    @include respond-to(md) {
+      .animation_container {
+        display: flex;
+      }
+    }
+    @include respond-to(lg) {
+      .animation_container {
+        display: flex;
       }
     }
   }

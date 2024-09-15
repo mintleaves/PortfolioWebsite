@@ -73,7 +73,7 @@ const Singlework = ({ item }) => {
               delay: 0.4,
             }}
           >
-            <h2>{item.title}</h2>
+            <h2 className="text-3xl font-semibold">{item.title}</h2>
             <p>{item.desc}</p>
             <div className="tech_container">
               {item.tech.map((tech, index) => (
@@ -81,8 +81,8 @@ const Singlework = ({ item }) => {
               ))}
             </div>
             <div className="btn_container">
-              <button><a href={item.viewSite} target="_blank">View Site</a></button>
-              <button>Code</button>
+              <button type="button" className="bg-white text-black font-medium"><a href={item.viewSite} target="_blank">View Site</a></button>
+              <button  type="button" className="bg-white text-black font-medium">Code</button>
             </div>
           </motion.div>
         {/* </div> */}
