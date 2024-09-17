@@ -5,16 +5,13 @@
     position: fixed;
     top: 0;
     right: 0;
-    // left: 0;
     bottom: 0;
-    width: 650px;
+    width: 280px;
     height: 100vh;
     background-color: white;
     color: black;
     z-index: 10;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    
 
     @include respond-to(xs) {
       width: 350px;
@@ -41,26 +38,6 @@
       justify-content: center;
       align-items: center;
       gap: 20px;
-
-      // a {
-      //   font-size: 40px;
-
-      //   @include respond-to(xs) {
-      //     font-size: 30px;
-      //   }
-
-      //   @include respond-to(sm) {
-      //     font-size: 32px;
-      //   }
-
-      //   @include respond-to(md) {
-      //     font-size: 35px;
-      //   }
-
-      //   @include respond-to(lg) {
-      //     font-size: 40px;
-      //   }
-      // }
     }
   }
   button {
@@ -69,13 +46,11 @@
     border-radius: 50%;
     position: fixed;
     top: 20px;
-    // left: 25px;
     right: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    // background-color: red;
     border: none;
     cursor: pointer;
     z-index: 10;

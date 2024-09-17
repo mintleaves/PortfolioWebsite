@@ -43,31 +43,53 @@ const skillsVariants = {
     },
   },
 };
+
 const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
     <div className="skills">
-      <h1>Skills__</h1>
-        <motion.div
-          ref={ref}
-          className="skills_card_container"
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={skillsVariants}
-        >
-          {skillsIcon.map((skill) => (
-            <motion.div
-              key={skill.id}
-              className="skill_card"
-              variants={skillVariants}
-            >
-              <img src={skill.iconImg} alt={skill.iconName} />
-              <h4>{skill.iconName}</h4>
-            </motion.div>
-          ))}
-        </motion.div>
+      <h1>Skills<span className="animate-blink">_</span></h1>
+      <motion.div
+        ref={ref}
+        className="skills_card_container"
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={skillsVariants}
+      >
+        {skillsIcon.map((skill) => (
+          <motion.div key={skill.id} variants={skillVariants}>
+            <SkillCard iconName={skill.iconName} iconImg={skill.iconImg} />
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
+  );
+};
+
+const SkillCard = ({ iconName, iconImg }) => {
+  return (
+    <Tilt>
+      <motion.div className="green-pink-gradient p-[1px] rounded-lg shadow-card">
+        <div
+          options={{
+            max: 45,
+            scale: 1,
+            speed: 450,
+          }}
+          className="bg-custom-background rounded-lg flex justify-evenly items-center flex-col min-h-[100px] min-w-[80px] sm:h-[140px] sm:w-[120px] md:h-[160px] md:w-[140px] lg:h-[200px] lg:w-[180px]"
+        >
+          <img
+            src={iconImg}
+            alt={iconName}
+            className="w-9 h-9 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
+          />
+          <h4 className="text-white text-[12px] md:text-[14px] lg:text-[15px] font-normal text-center">
+            {iconName}
+          </h4>
+        </div>
+      </motion.div>
+    </Tilt>
   );
 };
 

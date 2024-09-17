@@ -2,8 +2,7 @@
 // ====== MINT LEAVES
 
 .navbar {
-  // height: 90px;
-
+  
   .wrapper {
     max-width: 1366px;
     margin: auto;
@@ -15,17 +14,6 @@
     border-radius: 50px;
     padding: 0 25px;
     box-shadow:  0 5px 10px 1px rgba(255, 255, 255, 0.507);
-
-    // position: relative;
-    // max-width: 1366px;
-    // margin: auto;
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
-    // background-color: rgb(34, 33, 33);
-    // height: 100%;
-    // border-radius: 50px;
-    // padding: 0 25px;
 
     span {
       font-weight: 600;
@@ -42,25 +30,4 @@
       }
     }
   }
-  // .wrapper::before,
-  // .wrapper::after {
-  //   content: "";
-  //   position: absolute;
-  //   width: 100px;
-  //   height: 100px;
-  //   background: transparent; 
-  //   box-shadow: 0 5px 25px 1px rgba(255, 255, 255, 0.507); 
-  // }
-  
-  // .wrapper::before {
-  //   top: 0;
-  //   left: 0;
-  //   border-top-left-radius: 50px; 
-  // }
-  
-  // .wrapper::after {
-  //   bottom: 0;
-  //   right: 0;
-  //   border-bottom-right-radius: 50px;
-  // }
 }

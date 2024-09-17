@@ -3,7 +3,7 @@
 .contact {
   max-width: 1366px;
   margin: auto;
-  height: 100%;
+  padding: 0 0.5rem;
 
   @include respond-to(xs) {
     padding: 0 0.5rem;
@@ -22,7 +22,7 @@
   }
 
   h1 {
-    // font-size: 28px;
+    font-size: 30px;
     font-weight: bolder;
     color: white;
     margin: 1rem 0;
@@ -45,11 +45,10 @@
   }
 
   .contact_container {
-    margin-top: 5rem;
+    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
     position: relative;
 
     @include respond-to(xs) {
@@ -65,17 +64,6 @@
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
       margin-top: 4.5rem;
-
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   top: 0;
-      //   bottom: 0;
-      //   left: 50%;
-      //   width: 0.5px;
-      //   background-color: #8f9296;
-      //   transform: translateX(-50%);
-      // }
     }
 
     @include respond-to(lg) {
@@ -312,16 +300,11 @@
         justify-content: end;
 
         button {
-          padding: 0.8rem 2rem;
-          border: 1px solid #8f9296;
-          border-radius: 2rem;
-          background: transparent;
-          color: white;
-          display: flex;
-          align-items: center;
-          gap: 0.2rem;
-          font-size: 1rem;
-          transition: background 0.5s;
+          font-size: 1.1rem;
+          text-decoration: underline;
+          :hover {
+            text-decoration: none;
+          }
 
           @include respond-to(md) {
             font-size: 1.1rem;
@@ -342,14 +325,6 @@
             }
           }
 
-          // &:hover {
-          //   background: #E7E7E7;
-          //   border: 1px solid #8f9296;
-          //    color: black;
-          //    img {
-          //      filter: invert(100%);
-          //    }
-          // }
         }
       }
 
@@ -398,16 +373,6 @@
       }
     }
   }
-  // .contact_container::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: 50%;
-  //   width: 0.5px;
-  //   background-color: #8f9296;
-  //   transform: translateX(-50%);
-  // }
   .container_border {
     margin: 3rem 0;
     border-bottom: 1px solid #8f9296;

@@ -9,7 +9,9 @@ const About = () => {
     "As a skilled software engineer proficient in JavaScript, React, and Node.js, We possess a strong foundation in Computer Science and Engineering, earned through our 2022 graduation. Our knowledge of data structures and algorithms enables us to develop efficient and scalable solutions for complex challenges. We thrive in collaborative environments, delivering user-centric products by closely aligning with client needs.";
   return (
     <div className="about">
-      <h1>Introduction__</h1>
+      <h1>
+        About Us<span className="animate-blink">_</span>
+      </h1>
       <motion.div className="wrapper" ref={ref}>
         <div className="text_container">
           <AboutSecondText isInView={isInView} text={secPartTexts} />

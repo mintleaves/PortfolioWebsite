@@ -8,8 +8,6 @@ import Navbar from "./components/Navbar/Navbar";
 import Skills from "./components/Skills/Skills";
 import Testimonial from "./components/Testimonials/Testimonial";
 import Works from "./components/Works/Works";
-// import HeroAnim from "./components/HeroAnim/HeroAnim";
-import DragCards from "./components/Cards/DragCards";
 
 const App = () => {
   useEffect(() => {
@@ -29,9 +27,6 @@ const App = () => {
         <Navbar />
         <Hero />
       </section>
-      {/* <section>
-        <HeroAnim />
-      </section> */}
       <section id="About">
         <About />
       </section>
@@ -41,9 +36,6 @@ const App = () => {
       <Works id="Works" />
       <section id="Testimonials">
         <Testimonial />
-      </section>
-      <section>
-        <DragCards />
       </section>
       <section id="Contact">
         <Contact />

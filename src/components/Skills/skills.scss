@@ -4,6 +4,7 @@
   max-width: 1366px;
   margin: auto;
   height: 100%;
+  padding: 0 0.5rem;
 
   @include respond-to(xs) {
     padding: 0 0.5rem;
@@ -22,7 +23,7 @@
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bolder;
     color: white;
     margin: 1rem 0;
@@ -45,12 +46,11 @@
     }
   }
   .skills_card_container {
-    margin-top: 5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3rem;
-    // border: 2px solid;
+    margin-top: 2.5rem;
+    gap: 1.5rem;
 
     @include respond-to(xs) {
       margin-top: 2.5rem;
@@ -67,63 +67,8 @@
     @include respond-to(lg) {
       margin-top: 5rem;
     }
-
-    .skill_card {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: #161131;
-      border: 2px solid;
-      border-image: linear-gradient(90deg, black, #8f9296) 1;
-
-      @include respond-to(xs) {
-        gap: 1rem;
-        height: 8rem;
-        width: 7rem;
-
-        img {
-          height: 40px;
-        }
-        h4 {
-          font-size: 12px;
-        }
-      }
-
-      @include respond-to(sm) {
-        gap: 1rem;
-        height: 9rem;
-        width: 8rem;
-
-        img {
-          height: 40px;
-        }
-        h4 {
-          font-size: 12px;
-        }
-      }
-
-      @include respond-to(md) {
-        gap: 1.5rem;
-        height: 10rem;
-        width: 9rem;
-
-        img {
-          height: 60px;
-        }
-        h4 {
-          font-size: 14px;
-        }
-      }
-
-      @include respond-to(lg) {
-        gap: 2rem;
-        height: 12.5rem;
-        width: 11.35rem;
-        img {
-          height: 80px;
-        }
-      }
+    .green-pink-gradient {
+      background: linear-gradient(90.13deg, #000000 1.9%, #d4d4d4 97.5%);
     }
   }
 }

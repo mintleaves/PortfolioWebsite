@@ -61,7 +61,7 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <h1>Contact Us__</h1>
+      <h1>Contact Us<span className="animate-blink">_</span></h1>
       <motion.div className="contact_container">
         <motion.div
           className="intro_section"
@@ -116,48 +116,17 @@ const Contact = () => {
             animate={isInView ? "visible" : "hidden"}
             variants={socialHandleVariants}
           >
-            <motion.a
-              variants={itemVariants}
-              whileHover={{
-                scale: 1.1,
-                textShadow: "0px 0px 8px rgb(255,255,255)",
-                boxShadow: "0px 0px 8px rgb(255,255,255)",
-              }}
-            >
-              LinkedIn <img src="./up-arrow.png" alt="arrow icon" />
+            <motion.a variants={itemVariants}>
+              <DrawOutlineButton>LinkedIn</DrawOutlineButton>
             </motion.a>
-
-            <motion.a
-              variants={itemVariants}
-              whileHover={{
-                scale: 1.1,
-                textShadow: "0px 0px 8px rgb(255,255,255)",
-                boxShadow: "0px 0px 8px rgb(255,255,255)",
-              }}
-            >
-              Github <img src="./up-arrow.png" alt="arrow icon" />
+            <motion.a variants={itemVariants}>
+              <DrawOutlineButton>Github</DrawOutlineButton>
             </motion.a>
-
-            <motion.a
-              variants={itemVariants}
-              whileHover={{
-                scale: 1.1,
-                textShadow: "0px 0px 8px rgb(255,255,255)",
-                boxShadow: "0px 0px 8px rgb(255,255,255)",
-              }}
-            >
-              Dribble <img src="./up-arrow.png" alt="arrow icon" />
+            <motion.a variants={itemVariants}>
+              <DrawOutlineButton>Dribble</DrawOutlineButton>
             </motion.a>
-
-            <motion.a
-              variants={itemVariants}
-              whileHover={{
-                scale: 1.1,
-                textShadow: "0px 0px 8px rgb(255,255,255)",
-                boxShadow: "0px 0px 8px rgb(255,255,255)",
-              }}
-            >
-              Behance <img src="./up-arrow.png" alt="arrow icon" />
+            <motion.a variants={itemVariants}>
+              <DrawOutlineButton>Behance</DrawOutlineButton>
             </motion.a>
           </motion.div>
         </motion.div>
@@ -225,16 +194,9 @@ const Contact = () => {
               />
             </motion.div>
             <div className="form_btn">
-              <motion.button
-                type="submit"
-                variants={itemVariants}
-                whileHover={{
-                  scale: 1.1,
-                  textShadow: "0px 0px 8px rgb(255,255,255)",
-                  boxShadow: "0px 0px 8px rgb(255,255,255)",
-                }}
+              <motion.button type="submit" variants={itemVariants}
               >
-                Send <img src="./right-down.png" alt="" />
+                <DrawOutlineButton>Send</DrawOutlineButton>
               </motion.button>
             </div>
           </motion.form>
@@ -260,6 +222,28 @@ const Contact = () => {
   );
 };
 
+const DrawOutlineButton = ({ children, ...rest }) => {
+  return (
+    <button
+      {...rest}
+      className="group relative px-3 py-2 sm:px-4 sm:py-2 md:px-5 md:py-3 lg:px-6 lg:py-4 font-medium text-slate-100 transition-all duration-[400ms] hover:scale-110"
+    >
+      <span className="group-hover:bg-gradient-to-r group-hover:from-sky-400 group-hover:to-violet-700 group-hover:bg-clip-text group-hover:text-transparent">
+        {children}
+      </span>
 
+      {/* TOP */}
+      <span className="absolute left-0 top-0 h-[2px] w-0 bg-gradient-to-r from-violet-700 to-sky-400 transition-all duration-100 group-hover:w-full" />
 
+      {/* RIGHT */}
+      <span className="absolute right-0 top-0 h-0 w-[2px] bg-gradient-to-r from-violet-700 to-sky-400 transition-all delay-100 duration-100 group-hover:h-full" />
+
+      {/* BOTTOM */}
+      <span className="absolute bottom-0 right-0 h-[2px] w-0 bg-gradient-to-r from-violet-700 to-sky-400 transition-all delay-200 duration-100 group-hover:w-full" />
+
+      {/* LEFT */}
+      <span className="absolute bottom-0 left-0 h-0 w-[2px] bg-gradient-to-r from-violet-700 to-sky-400 transition-all delay-300 duration-100 group-hover:h-full" />
+    </button>
+  );
+};
 export default Contact;

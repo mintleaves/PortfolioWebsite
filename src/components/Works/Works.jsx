@@ -45,46 +45,53 @@ const Singlework = ({ item }) => {
     <section>
       <div className="container" ref={ref}>
         {/* <div className="wrapper"> */}
-          <motion.div
-            className="imgContainer"
-            isInView={isInView}
-            initial={{ x: 100, opacity: 0 }}
-            animate={isInView ? { x: 0, opacity: 1 } : {}}
-            transition={{
-              type: "spring",
-              stiffness: 50,
-              damping: 20,
-              duration: 1,
-              delay: 0.1,
-            }}
-          >
-            <img src={item.img} alt="project image" />
-          </motion.div>
-          <motion.div
-            className="textContainer"
-            isInView={isInView}
-            initial={{ x: -100, opacity: 0 }}
-            animate={isInView ? { x: 0, opacity: 1 } : {}}
-            transition={{
-              type: "spring",
-              stiffness: 50,
-              damping: 20,
-              duration: 1,
-              delay: 0.4,
-            }}
-          >
-            <h2 className="text-3xl font-semibold">{item.title}</h2>
-            <p>{item.desc}</p>
-            <div className="tech_container">
-              {item.tech.map((tech, index) => (
-                <span key={index}>{tech}</span>
-              ))}
-            </div>
-            <div className="btn_container">
-              <button type="button" className="bg-white text-black font-medium"><a href={item.viewSite} target="_blank">View Site</a></button>
-              <button  type="button" className="bg-white text-black font-medium">Code</button>
-            </div>
-          </motion.div>
+        <motion.div
+          className="imgContainer"
+          isInView={isInView}
+          initial={{ x: 100, opacity: 0 }}
+          animate={isInView ? { x: 0, opacity: 1 } : {}}
+          transition={{
+            type: "spring",
+            stiffness: 50,
+            damping: 20,
+            duration: 1,
+            delay: 0.1,
+          }}
+        >
+          <img src={item.img} alt="project image" />
+        </motion.div>
+        <motion.div
+          className="textContainer"
+          isInView={isInView}
+          initial={{ x: -100, opacity: 0 }}
+          animate={isInView ? { x: 0, opacity: 1 } : {}}
+          transition={{
+            type: "spring",
+            stiffness: 50,
+            damping: 20,
+            duration: 1,
+            delay: 0.4,
+          }}
+        >
+          <h2 className="text-3xl font-semibold">{item.title}</h2>
+          <p>{item.desc}</p>
+          <div className="tech_container">
+            {item.tech.map((tech, index) => (
+              <span key={index}>{tech}</span>
+            ))}
+          </div>
+          <div className="btn_container">
+            <button
+              type="button"
+              className="bg-white text-black font-semibold transition-all duration-[400ms] hover:bg-slate-300 hover:scale-110"
+            >
+              <a href={item.viewSite} target="_blank">
+                View Site
+              </a>
+            </button>
+            {/* <button  type="button" className="bg-white text-black font-medium">Code</button> */}
+          </div>
+        </motion.div>
         {/* </div> */}
       </div>
     </section>
@@ -103,7 +110,7 @@ const Works = ({ id }) => {
   return (
     <div className="works" ref={ref} id={id}>
       <div className="progress">
-        <h1>Featured Works__</h1>
+        <h1>Featured Works<span className="animate-blink">_</span></h1>
         <motion.div
           style={{ scaleX: scaleX, transformOrigin: "0% 0%" }}
           className="progressBar"

@@ -4,7 +4,7 @@
   max-width: 1366px;
   margin: auto;
   height: 100%;
-  // border: 5px solid red;
+  padding: 0 0.5rem;
 
   @include respond-to(xs) {
     padding: 0 0.5rem;
@@ -22,7 +22,7 @@
     padding: 0;
   }
   h1 {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bolder;
     color: white;
     // margin: 1rem 0;
@@ -47,8 +47,7 @@
     // border: 5px solid yellow;
 
     .review_section {
-      // border: 5px solid rgb(98, 0, 255);
-      // height: 100%;
+      padding: 20px;
 
       @include respond-to(xs) {
         padding: 20px;
@@ -68,7 +67,7 @@
       p {
         
         @include respond-to(lg) {
-          letter-spacing: 1.5px;
+        letter-spacing: 1.5px;
         line-height: 50px;
         }
       }

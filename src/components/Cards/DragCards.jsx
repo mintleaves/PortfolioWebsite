@@ -176,9 +176,9 @@ const Reviews = ({ currentIndex }) => {
             className=" review_section aspect-video w-full shrink-0 rounded-xl bg-custom-background text-center flex items-center justify-center flex-col"
           >
             
-            <p className="text-custom-text-color text-xl md:text-2xl lg:text-3xl font-thin">{review.statement}</p>
+            <p className="text-gray-300 text-xl md:text-2xl lg:text-3xl font-thin">{review.statement}</p>
             <div className="flex justify-center items-center mt-9 gap-3">
-              <h3 className="text-custom-text-color capitalize underline text-md md:text-lg lg:text-xl">
+              <h3 className="text-gray-300 capitalize underline text-md md:text-lg lg:text-xl">
                 {review.clientName}
               </h3>
               <img

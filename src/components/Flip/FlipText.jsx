@@ -1,27 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const HeroAnim = () => {
-  return (
-    <section className="grid place-content-center gap-2 px-8 py-24 text-white">
-      <FlipText href="#">GrubHTML.com</FlipText>
-      <div>
-      </div>
-    </section>
-  );
-};
-
-
 const DURATION = 0.25;
 const STAGGER = 0.025;
 
-const FlipText = ({ children, href }) => {
+const FlipText = ({ className, children, href }) => {
   return (
     <motion.a
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="relative block overflow-hidden whitespace-nowrap text-4xl font-black sm:text-7xl md:text-8xl lg:text-9xl"
+      className={`relative block overflow-hidden whitespace-nowrap font-black ${className}`}
       style={{
         lineHeight: 0.85,
       }}
@@ -76,4 +65,4 @@ const FlipText = ({ children, href }) => {
   );
 };
 
-export default HeroAnim;
+export default FlipText;

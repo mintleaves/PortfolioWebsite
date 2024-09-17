@@ -4,21 +4,7 @@ import { OrbitControls, Sphere } from "@react-three/drei";
 import { motion } from "framer-motion";
 import { pointsInner, pointsOuter } from "./utils";
 import "./hero.scss";
-
-const textVariants = {
-  initial: {
-    y: -800,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.2,
-    },
-  },
-};
+import FlipText from "../Flip/FlipText";
 
 const Hero = () => {
   return (
@@ -28,43 +14,53 @@ const Hero = () => {
           position: [10, -7.5, -5],
         }}
       >
-        <OrbitControls maxDistance={30} minDistance={10} enableZoom={false}/>
+        <OrbitControls maxDistance={30} minDistance={10} enableZoom={false} />
         <directionalLight />
         <pointLight position={[-30, 0, -30]} power={10.0} />
         <PointCircle />
       </Canvas>
 
-      <h1>GrubHTML.com</h1>
-     
-      <div className="text_container">
-        <p>Crafting animated visuals, UI design and Full-stack web apps</p>
+      <div className="heroWrapper">
+        {/* <h1>GrubHTML.com</h1> */}
+        <FlipText className="text-3xl md:text-5xl lg:text-7xl text-white cursor-pointer">
+          GrubHTML.com
+        </FlipText>
+        <div className="text_container">
+          <p>Crafting animated visuals, UI design and Full-stack web apps</p>
+        </div>
+        <div className="buttons">
+          <button className="transition-all duration-[400ms] hover:scale-110">
+            {/* <FlipText> */}
+              {/* {" "} */}
+              <a href="" target="_blank">
+                My Works
+              </a>
+            {/* </FlipText> */}
+          </button>
+          <button className="transition-all duration-[400ms] hover:scale-110">
+            <a href="" target="_blank">
+              Contact Me
+            </a>
+          </button>
+        </div>
+        <div className="scroll_animation">
+          <a href="#About">
+            <div className="scroll_icon transition-all duration-[400ms] hover:scale-110">
+              <motion.div
+                animate={{
+                  y: [0, 30, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
+                className="scroll_icon_circle"
+              ></motion.div>
+            </div>
+          </a>
+        </div>
       </div>
-      <div className="buttons">
-        <button>My Works</button>
-        <button><a href="" target="_blank">Contact Me</a></button>
-      </div>
-      <motion.div
-        className="scroll_animation"
-        initial="initial"
-        animate="animate"
-        variants={textVariants}
-      >
-        <a href="#About">
-          <div className="scroll_icon">
-            <motion.div
-              animate={{
-                y: [0, 30, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="scroll_icon_circle"
-            ></motion.div>
-          </div>
-        </a>
-      </motion.div>
     </div>
   );
 };
