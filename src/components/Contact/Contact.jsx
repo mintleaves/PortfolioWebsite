@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-
+import PropTypes from "prop-types";
 import "./contact.scss";
 
 const Contact = () => {
@@ -61,7 +61,9 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <h1>Contact Us<span className="animate-blink">_</span></h1>
+      <h1>
+        Contact Us<span className="animate-blink">_</span>
+      </h1>
       <motion.div className="contact_container">
         <motion.div
           className="intro_section"
@@ -194,8 +196,7 @@ const Contact = () => {
               />
             </motion.div>
             <div className="form_btn">
-              <motion.button type="submit" variants={itemVariants}
-              >
+              <motion.button type="submit" variants={itemVariants}>
                 <DrawOutlineButton>Send</DrawOutlineButton>
               </motion.button>
             </div>
@@ -245,5 +246,9 @@ const DrawOutlineButton = ({ children, ...rest }) => {
       <span className="absolute bottom-0 left-0 h-0 w-[2px] bg-gradient-to-r from-violet-700 to-sky-400 transition-all delay-300 duration-100 group-hover:h-full" />
     </button>
   );
+};
+
+DrawOutlineButton.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 export default Contact;

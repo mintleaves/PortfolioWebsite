@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Tilt from "react-parallax-tilt";
+import PropTypes from "prop-types";
+
 import "./skills.scss";
 
 const skillsIcon = [
@@ -49,7 +51,9 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true });
   return (
     <div className="skills">
-      <h1>Skills<span className="animate-blink">_</span></h1>
+      <h1>
+        Skills<span className="animate-blink">_</span>
+      </h1>
       <motion.div
         ref={ref}
         className="skills_card_container"
@@ -91,6 +95,11 @@ const SkillCard = ({ iconName, iconImg }) => {
       </motion.div>
     </Tilt>
   );
+};
+
+SkillCard.propTypes = {
+  iconName: PropTypes.string.isRequired,
+  iconImg: PropTypes.string.isRequired,
 };
 
 export default Skills;

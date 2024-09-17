@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import "./works.scss";
 import { motion, useScroll, useSpring, useInView } from "framer-motion";
+import PropTypes from 'prop-types';
 
 const items = [
   {
@@ -19,22 +20,6 @@ const items = [
     tech: ["HTML", "CSS", "JS", "Bootstrap", "APIs"],
     viewSite: ["https://tarkovtracker.ca/"],
   },
-  // {
-  //   id: 3,
-  //   title: "Custom CRM",
-  //   img: "./dashboard.png",
-  //   desc: "We develop a personal portfolio which have three case studt where we implemented some more features.",
-  //   tech: ["HTML", "CSS", "JS", "PHP", "Bootstrap", "Laravel", "APIs"],
-  //   viewSite: ["https://rahayudesign.com/"],
-  // },
-  // {
-  //   id: 4,
-  //   title: "Apparel Studio",
-  //   img: "./apparel.jpg",
-  //   desc: "We develop a personal portfolio which have three case studt where we implemented some more features.",
-  //   tech: ["HTML", "CSS", "Bootstrap", "MySQL"],
-  //   viewSite: ["https://rahayudesign.com/"],
-  // },
 ];
 
 const Singlework = ({ item }) => {
@@ -122,5 +107,20 @@ const Works = ({ id }) => {
     </div>
   );
 };
+
+Works.propTypes = {
+  id: PropTypes.number.isRequired,
+};
+Singlework.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    tech: PropTypes.arrayOf(PropTypes.string).isRequired,
+    viewSite: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+};
+
 
 export default Works;

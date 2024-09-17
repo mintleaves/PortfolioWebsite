@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import PropTypes from 'prop-types';
 import "./About.scss";
 
 const About = () => {
@@ -86,6 +87,15 @@ const AboutSecondText = ({ text, isInView }) => {
       {wrapTextInSpans(text)}
     </motion.p>
   );
+};
+
+AboutFirstText.propTypes = {
+  isInView: PropTypes.bool.isRequired,
+  text: PropTypes.string.isRequired,
+}
+AboutSecondText.propTypes = {
+  isInView: PropTypes.bool.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default About;

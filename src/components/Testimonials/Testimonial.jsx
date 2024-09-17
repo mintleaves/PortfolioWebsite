@@ -1,5 +1,7 @@
-import { useEffect, useState, useRef } from "react";
-import { motion, useMotionValue, useInView } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, useMotionValue } from "framer-motion";
+import PropTypes from 'prop-types';
+
 import "./testimonial.scss";
 
 const reviews = [
@@ -220,6 +222,15 @@ const GradientEdges = () => {
       <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" />
     </>
   );
+};
+
+Dots.propTypes = {
+  currentIndex: PropTypes.number.isRequired,
+  setCurrentIndex: PropTypes.func.isRequired,
+};
+Reviews.propTypes = {
+  currentIndex: PropTypes.number.isRequired,
+  setCurrentIndex: PropTypes.func.isRequired,
 };
 
 export default Testimonial;
