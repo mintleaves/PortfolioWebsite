@@ -6,10 +6,16 @@ import { pointsInner, pointsOuter } from "./utils";
 import "./hero.scss";
 import FlipText from "../Flip/FlipText";
 
+import desktop from "./assets/deskScreen.jpg";
+
 const Hero = () => {
   return (
     <div className="hero">
-      <Canvas
+      <div className="img_con">
+      <img src={desktop} alt="desktop" className="w-[800px]"/>
+      </div>
+
+      {/* <Canvas
         camera={{
           position: [10, -7.5, -5],
         }}
@@ -18,10 +24,9 @@ const Hero = () => {
         <directionalLight />
         <pointLight position={[-30, 0, -30]} power={10.0} />
         <PointCircle />
-      </Canvas>
+      </Canvas> */}
 
-      <div className="heroWrapper">
-        {/* <h1>GrubHTML.com</h1> */}
+      {/* <div className="heroWrapper">
         <FlipText className="text-3xl md:text-5xl lg:text-7xl text-white cursor-pointer">
           GrubHTML.com
         </FlipText>
@@ -30,12 +35,9 @@ const Hero = () => {
         </div>
         <div className="buttons">
           <button className="transition-all duration-[400ms] hover:scale-110">
-            {/* <FlipText> */}
-              {/* {" "} */}
-              <a href="" target="_blank">
-                My Works
-              </a>
-            {/* </FlipText> */}
+            <a href="" target="_blank">
+              My Works
+            </a>
           </button>
           <button className="transition-all duration-[400ms] hover:scale-110">
             <a href="" target="_blank">
@@ -60,43 +62,43 @@ const Hero = () => {
             </div>
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
-const PointCircle = () => {
-  const ref = useRef(null);
+// const PointCircle = () => {
+//   const ref = useRef(null);
 
-  useFrame(({ clock }) => {
-    if (ref.current?.rotation) {
-      ref.current.rotation.z = clock.getElapsedTime() * 0.05;
-    }
-  });
+//   useFrame(({ clock }) => {
+//     if (ref.current?.rotation) {
+//       ref.current.rotation.z = clock.getElapsedTime() * 0.05;
+//     }
+//   });
 
-  return (
-    <group ref={ref}>
-      {pointsInner.map((point) => (
-        <Point key={point.idx} position={point.position} color={point.color} />
-      ))}
-      {pointsOuter.map((point) => (
-        <Point key={point.idx} position={point.position} color={point.color} />
-      ))}
-    </group>
-  );
-};
+//   return (
+//     <group ref={ref}>
+//       {pointsInner.map((point) => (
+//         <Point key={point.idx} position={point.position} color={point.color} />
+//       ))}
+//       {pointsOuter.map((point) => (
+//         <Point key={point.idx} position={point.position} color={point.color} />
+//       ))}
+//     </group>
+//   );
+// };
 
-const Point = ({ position, color }) => {
-  return (
-    <Sphere position={position} args={[0.1, 10, 10]}>
-      <meshStandardMaterial
-        emissive={color}
-        emissiveIntensity={0.5}
-        roughness={0.5}
-        color={color}
-      />
-    </Sphere>
-  );
-};
+// const Point = ({ position, color }) => {
+//   return (
+//     <Sphere position={position} args={[0.1, 10, 10]}>
+//       <meshStandardMaterial
+//         emissive={color}
+//         emissiveIntensity={0.5}
+//         roughness={0.5}
+//         color={color}
+//       />
+//     </Sphere>
+//   );
+// };
 
 export default Hero;

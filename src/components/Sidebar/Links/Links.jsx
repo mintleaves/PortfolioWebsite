@@ -1,6 +1,6 @@
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion";
-import FlipText from "../../Flip/FlipText";
+// import FlipText from "../../Flip/FlipText";
 
 const variants = {
   open: {
@@ -43,8 +43,11 @@ const Links = () => {
           variants={listItemvariants}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
+          className=" font-bold text-3xl md:text-4xl lg:text-5xl"
         >
-          <FlipText className="text-3xl md:text-4xl lg:text-5xl">{listItem}</FlipText>
+          {/* <FlipText className="text-3xl md:text-4xl lg:text-5xl"> */}
+          {listItem}
+          {/* </FlipText> */}
         </motion.a>
       ))}
     </motion.div>

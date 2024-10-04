@@ -92,14 +92,7 @@ const Contact = () => {
             </motion.div>
 
             <motion.div className="projects">
-              <motion.h2
-                whileHover={{
-                  borderBottom: "2px solid white",
-                  transition: { duration: 0.3 },
-                }}
-              >
-                Projects
-              </motion.h2>
+              <motion.h2>Projects</motion.h2>
             </motion.div>
             <div className="services">
               <h2>Services</h2>

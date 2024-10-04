@@ -3,31 +3,5 @@
 
 .navbar {
   
-  .wrapper {
-    max-width: 1366px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(34, 33, 33);
-    height: 100%;
-    border-radius: 50px;
-    padding: 0 25px;
-    box-shadow:  0 5px 10px 1px rgba(255, 255, 255, 0.507);
 
-    span {
-      font-weight: 600;
-      font-size: 18px;
-    }
-    .social {
-      display: flex;
-      gap: 5px;
-
-      img {
-        height: 32px;
-        width: 32px;
-        filter: invert(100%);
-      }
-    }
-  }
 }
