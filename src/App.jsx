@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Skills from "./components/Skills/Skills";
 import Testimonial from "./components/Testimonials/Testimonial";
 import Works from "./components/Works/Works";
+import ParallaxHero from "./components/ParallaxHero/ParallaxHero";
 
 const App = () => {
   useEffect(() => {
@@ -23,10 +24,18 @@ const App = () => {
 
   return (
     <>
-      <section id="Home">
+      {/* <section> */}
         <Navbar />
+      {/* </section> */}
+
+      {/* <section id="Home">
         <Hero />
+      </section> */}
+
+      <section id="Home">
+        <ParallaxHero />
       </section>
+      
       <section id="About">
         <About />
       </section>
@@ -34,9 +43,7 @@ const App = () => {
         <Skills />
       </section>
       <Works id="Works" />
-      <section id="Services">
-        <Testimonial />
-      </section>
+      <section id="Services">{/* <Testimonial /> */}</section>
       <section id="Testimonials">
         <Testimonial />
       </section>
