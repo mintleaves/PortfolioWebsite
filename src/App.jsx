@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./index.css";
 import "./app.scss";
 import About from "./components/About/About";
@@ -25,32 +25,44 @@ const App = () => {
   return (
     <>
       {/* <section> */}
-        <Navbar />
+      <Navbar />
       {/* </section> */}
 
       {/* <section id="Home">
         <Hero />
       </section> */}
 
+    {/* parallax hero is Right */}
       <section id="Home">
         <ParallaxHero />
       </section>
-      
+
+    {/* About is Right */}
       <section id="About">
         <About />
       </section>
-      <section id="Skills">
+
+      {/* Skils has problem */}
+      {/* <section id="Skills">
         <Skills />
-      </section>
-      <Works id="Works" />
-      <section id="Services">{/* <Testimonial /> */}</section>
+      </section> */}
+     
+    {/* Works has problem */}
+      {/* <Works id="Works" /> */}
+
+      <section id="Services"></section>
+      <section id="Services"></section>
+      <section id="Services"></section>
+
+      {/* Testimonial is right */}
       <section id="Testimonials">
         <Testimonial />
       </section>
 
-      <section id="Contact">
+      {/* Contact has problem */}
+      {/* <section id="Contact">
         <Contact />
-      </section>
+      </section> */}
     </>
   );
 };

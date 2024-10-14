@@ -16,7 +16,7 @@ html {
 body {
   // background-color: #0c0c1d;
   background-color: #000000;
-
+  
   color: lightgrey;
   // max-width: 1366px;
   // margin: auto;
@@ -26,6 +26,9 @@ a {
   color: inherit;
 }
 section {
+  scroll-snap-align: center;
+  height: 100vh;
+
   @include respond-to(xs) {
     margin-bottom: 5rem;
     // border: 3px solid red;
@@ -34,22 +37,15 @@ section {
   @include respond-to(sm) {
     margin-bottom: 6rem;
     // border: 3px solid blue;
-
   }
 
   @include respond-to(md) {
-    scroll-snap-align: center;
-    height: 100vh;
     margin-bottom: 8rem;
     // border: 3px solid green;
-
   }
 
   @include respond-to(lg) {
-    scroll-snap-align: center;
-    height: 100vh;
     margin-bottom: 10rem;
     // border: 3px solid yellow;
-    
   }
 }

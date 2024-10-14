@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
-import { motion, useMotionValue } from "framer-motion";
-import PropTypes from 'prop-types';
+// import { useEffect, useState } from "react";
+// import { motion, useMotionValue } from "framer-motion";
+import PropTypes from "prop-types";
+import { div } from "three/examples/jsm/nodes/Nodes.js";
 
-import "./testimonial.scss";
+// import "./testimonial.scss";
 
-const reviews = [
+const testimonials = [
   {
     id: 1,
     statement:
@@ -93,144 +94,45 @@ const reviews = [
   },
 ];
 
-const ONE_SECOND = 1000;
-const AUTO_DELAY = ONE_SECOND * 10;
-const DRAG_BUFFER = 50;
-
-const SPRING_OPTIONS = {
-  type: "spring",
-  mass: 3,
-  stiffness: 400,
-  damping: 50,
-};
-
 const Testimonial = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const dragX = useMotionValue(0);
-
-  useEffect(() => {
-    const intervalRef = setInterval(() => {
-      const x = dragX.get();
-
-      if (x === 0) {
-        setCurrentIndex((pv) => {
-          if (pv === reviews.length - 1) {
-            return 0;
-          }
-          return pv + 1;
-        });
-      }
-    }, AUTO_DELAY);
-
-    return () => clearInterval(intervalRef);
-  }, []);
-
-  const onDragEnd = () => {
-    const x = dragX.get();
-
-    if (x <= -DRAG_BUFFER && currentIndex < reviews.length - 1) {
-      setCurrentIndex((pv) => pv + 1);
-    } else if (x >= DRAG_BUFFER && currentIndex > 0) {
-      setCurrentIndex((pv) => pv - 1);
-    }
-  };
-
   return (
+    // <div className="">
     <div className="testimonials">
-      <h1>Testimonials<span className="animate-blink">_</span></h1>
-      <div className="relative overflow-hidden reviews_section">
-        <motion.div
-          drag="x"
-          dragConstraints={{
-            left: 0,
-            right: 0,
-          }}
-          style={{
-            x: dragX,
-          }}
-          animate={{
-            translateX: `-${currentIndex * 100}%`,
-          }}
-          transition={SPRING_OPTIONS}
-          onDragEnd={onDragEnd}
-          className="flex cursor-grab items-center active:cursor-grabbing"
-        >
-          <Reviews currentIndex={currentIndex} />
-        </motion.div>
-
-        <Dots currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
-        <GradientEdges />
+      <h2 className="text-white/50 text-lg md:text-xl text-center mt-5">
+        Delighted Clients.
+      </h2>
+      <p className="text-3xl md:text-4xl text-center tracking-tighter font-medium mt-4">
+        What Our Clients Think About Us
+      </p>
+      <div className="overflow-hidden mt-10 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+        <div className="flex gap-5">
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              className="border border-white/15 p-6 md:p-10 rounded-xl bg-[linear-gradient(to_bottom_left,rgb(140,69,255,.3),black)] max-w-sm md:max-w-md flex-none"
+            >
+              <div className="flex flex-col justify-between h-full">
+                <div className="text-lg md:text-xl tracking-tight">
+                  &#34; {testimonial.statement} &#34;
+                </div>
+                <div className="flex justify-center items-center gap-3 mt-5">
+                  <img
+                    src={testimonial.img}
+                    alt={`Image for ${testimonial.clientName}`}
+                    className="h-10 w-10 rounded-full border border-white"
+                  />
+                  <div className="uppercase text-sm font-medium text-gray-400">
+                    {testimonial.clientName}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
+    // </div>
   );
-};
-
-const Reviews = ({ currentIndex }) => {
-  return (
-    <>
-      {reviews.map((review, idx) => {
-        return (
-          <motion.div
-            key={review.id}
-            animate={{ scale: currentIndex === idx ? 0.95 : 0.85 }}
-            transition={SPRING_OPTIONS}
-            className=" review_section aspect-video w-full shrink-0 rounded-xl bg-custom-background text-center flex items-center justify-center flex-col"
-          >
-            <p className="text-gray-300 text-xl md:text-2xl lg:text-3xl font-thin">
-              {review.statement}
-            </p>
-            <div className="flex justify-center items-center mt-9 gap-3">
-              <h3 className="text-gray-300 capitalize underline text-md md:text-lg lg:text-xl">
-                {review.clientName}
-              </h3>
-              <img
-                src={review.img}
-                alt={review.clientName}
-                className="w-12 h-12 rounded-full mr-4 border"
-              />
-            </div>
-          </motion.div>
-        );
-      })}
-    </>
-  );
-};
-
-const Dots = ({ currentIndex, setCurrentIndex }) => {
-  return (
-    <div className="mt-4 flex w-full justify-center gap-2">
-      {reviews.map((_, idx) => {
-        return (
-          <button
-            key={idx}
-            onClick={() => setCurrentIndex(idx)}
-            className={`h-3 w-3 rounded-full transition-colors ${
-              idx === currentIndex ? "bg-neutral-50" : "bg-neutral-500"
-            }`}
-          />
-        );
-      })}
-    </div>
-  );
-};
-
-const GradientEdges = () => {
-  return (
-    <>
-      <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0" />
-      <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" />
-    </>
-  );
-};
-
-Dots.propTypes = {
-  currentIndex: PropTypes.number.isRequired,
-  setCurrentIndex: PropTypes.func.isRequired,
-};
-Reviews.propTypes = {
-  currentIndex: PropTypes.number.isRequired,
-  setCurrentIndex: PropTypes.func.isRequired,
 };
 
 export default Testimonial;
