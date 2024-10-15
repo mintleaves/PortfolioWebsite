@@ -1,76 +1,76 @@
-@import "../_mixins.scss";
+// @import "../_mixins.scss";
 
-.testimonials {
-  max-width: 1366px;
-  margin: auto;
-  height: 100%;
-  padding: 0 0.5rem;
+// .testimonials {
+//   max-width: 1366px;
+//   margin: auto;
+//   height: 100%;
+//   padding: 0 0.5rem;
 
-  @include respond-to(xs) {
-    padding: 0 0.5rem;
-  }
+//   @include respond-to(xs) {
+//     padding: 0 0.5rem;
+//   }
 
-  @include respond-to(sm) {
-    padding: 0 0.6rem;
-  }
+//   @include respond-to(sm) {
+//     padding: 0 0.6rem;
+//   }
 
-  @include respond-to(md) {
-    padding: 0 0.7rem;
-  }
+//   @include respond-to(md) {
+//     padding: 0 0.7rem;
+//   }
 
-  @include respond-to(lg) {
-    padding: 0;
-  }
-  h1 {
-    font-size: 30px;
-    font-weight: bolder;
-    color: white;
-    // margin: 1rem 0;
+//   @include respond-to(lg) {
+//     padding: 0;
+//   }
+//   h1 {
+//     font-size: 30px;
+//     font-weight: bolder;
+//     color: white;
+//     // margin: 1rem 0;
 
-    @include respond-to(xs) {
-      font-size: 32px;
-    }
+//     @include respond-to(xs) {
+//       font-size: 32px;
+//     }
 
-    @include respond-to(sm) {
-      font-size: 36px;
-    }
+//     @include respond-to(sm) {
+//       font-size: 36px;
+//     }
 
-    @include respond-to(md) {
-      font-size: 48px;
-    }
+//     @include respond-to(md) {
+//       font-size: 48px;
+//     }
 
-    @include respond-to(lg) {
-      font-size: 60px;
-    }
-  }
-  .reviews_section {
-    // border: 5px solid yellow;
+//     @include respond-to(lg) {
+//       font-size: 60px;
+//     }
+//   }
+//   .reviews_section {
+//     // border: 5px solid yellow;
 
-    .review_section {
-      padding: 20px;
+//     .review_section {
+//       padding: 20px;
 
-      @include respond-to(xs) {
-        padding: 20px;
-      }
+//       @include respond-to(xs) {
+//         padding: 20px;
+//       }
 
-      @include respond-to(sm) {
-      }
+//       @include respond-to(sm) {
+//       }
 
-      @include respond-to(md) {
-        padding: 50px;
-      }
+//       @include respond-to(md) {
+//         padding: 50px;
+//       }
 
-      @include respond-to(lg) {
-        padding: 150px;
-      }
+//       @include respond-to(lg) {
+//         padding: 150px;
+//       }
 
-      p {
+//       p {
         
-        @include respond-to(lg) {
-        letter-spacing: 1.5px;
-        line-height: 50px;
-        }
-      }
-    }
-  }
-}
+//         @include respond-to(lg) {
+//         letter-spacing: 1.5px;
+//         line-height: 50px;
+//         }
+//       }
+//     }
+//   }
+// }

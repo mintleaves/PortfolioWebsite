@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Button from "../ReuseComponents/Button";
 import globe from "./globe.mp4";
-// import starBG from "./starBg5.jpg";
 import { createRandomSparkle, initSparkles } from "./heroBg";
 import "./phero.scss";
 
@@ -12,7 +11,6 @@ const ParallaxHero = () => {
   return (
     <section
       className="starBG flex items-center justify-center overflow-hidden relative"
-      // style={{ backgroundImage: `url(${starBG})` }}
     >
       <div className="absolute h-[400px] w-[400px] md:h-[500px] md:w-[500px] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
         <video

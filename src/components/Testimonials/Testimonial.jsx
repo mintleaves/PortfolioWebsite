@@ -1,7 +1,7 @@
 // import { useEffect, useState } from "react";
 // import { motion, useMotionValue } from "framer-motion";
-import PropTypes from "prop-types";
-import { div } from "three/examples/jsm/nodes/Nodes.js";
+// import PropTypes from "prop-types";
+// import { div } from "three/examples/jsm/nodes/Nodes.js";
 
 // import "./testimonial.scss";
 
@@ -96,8 +96,7 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    // <div className="">
-    <div className="testimonials">
+    <div className="testimonials max-w-[1366px] mx-auto px-2 md:px-0">
       <h2 className="text-white/50 text-lg md:text-xl text-center mt-5">
         Delighted Clients.
       </h2>
@@ -131,7 +130,6 @@ const Testimonial = () => {
         </div>
       </div>
     </div>
-    // </div>
   );
 };
 
