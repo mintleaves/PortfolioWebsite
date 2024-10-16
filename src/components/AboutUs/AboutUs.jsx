@@ -1,4 +1,7 @@
-import AiImg from "./assets/Ai.png";
+import { useEffect } from "react";
+import "./aboutus.scss";
+
+import aiImg from "./assets/Ai.png";
 import building from "./assets/building.jpg";
 import seo from "./assets/seo.jpg";
 import fullstack from "./assets/fullstack.png";
@@ -6,6 +9,27 @@ import hosting from "./assets/hosting.jpg";
 import timezone from "./assets/timezone.mp4";
 
 const AboutUs = () => {
+  useEffect(() => {
+    const animateButton = (e) => {
+      e.preventDefault();
+      e.target.classList.remove("animate");
+      e.target.classList.add("animate");
+      setTimeout(() => {
+        e.target.classList.remove("animate");
+      }, 700);
+    };
+
+    const bubblyButtons = document.getElementsByClassName("bubbly-button");
+    for (let i = 0; i < bubblyButtons.length; i++) {
+      bubblyButtons[i].addEventListener("click", animateButton, false);
+    }
+
+    return () => {
+      for (let i = 0; i < bubblyButtons.length; i++) {
+        bubblyButtons[i].removeEventListener("click", animateButton, false);
+      }
+    };
+  }, []);
   return (
     <div className="aboutUs max-w-[1366px] mx-auto px-2 md:px-0">
       <h2 className="text-white/50 text-lg md:text-xl text-center mt-5">
@@ -37,40 +61,19 @@ const AboutUs = () => {
               <span className="text-3xl"> GrubHTML</span>.
             </p>
           </div>
+
           <div className="col-span-3 row-span-1 border border-gray-200/20 rounded-lg flex flex-col items-center justify-evenly">
             <h2 className="text-3xl">
               Do you want to start a project together?
             </h2>
-            <button>
-              {" "}
-              <a
-                href="#_"
-                className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-purple-600 border-2 border-purple-600 rounded-full hover:text-white group hover:bg-gray-50"
-              >
-                <span className="absolute left-0 block w-full h-0 transition-all bg-purple-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
-                <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    ></path>
-                  </svg>
-                </span>
-                <span className="relative">Our Email – Copy It!</span>
-              </a>
+
+            <button className="bubbly-button px-12 py-3 text-lg font-medium text-sky-800 border-2 border-sky-800 rounded-full shadow-[0px_0px_12px_#6F94F4] transform transition-transform duration-300 hover:scale-110">
+              Tap to Copy Our Email!
             </button>
           </div>
 
           <div className="col-span-1 row-span-2 border border-gray-200/20 rounded-lg overflow-hidden relative ">
-            <div className="absolute top-1/3 left-0 overflow-hidden">
+            <div className="absolute top-[200px] left-0 overflow-hidden">
               <video
                 className="w-full h-full object-cover"
                 src={timezone}
@@ -79,16 +82,16 @@ const AboutUs = () => {
                 muted
               ></video>
             </div>
-            <h2 className="relative text-2xl text-center mt-10">
-            Your Time Zone, Our Flexibility!
+            <h2 className="relative text-3xl text-center mt-10">
+              Your Time Zone, Our Flexibility!
             </h2>
           </div>
-          <div className="timezone col-span-2 row-span-2 border border-gray-200/20 rounded-lg bg-lime-500">
-          </div>
+
+          <div className="timezone col-span-2 row-span-2 border border-gray-200/20 rounded-lg bg-lime-500"></div>
           <div className="relative col-span-1 row-span-1 border border-gray-200/20 rounded-lg overflow-hidden flex justify-center items-center group">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-110 group-hover:rotate-6"
-              style={{ backgroundImage: `url(${AiImg})` }}
+              style={{ backgroundImage: `url(${aiImg})` }}
             ></div>
             <div className="absolute inset-0 bg-black bg-opacity-60"></div>
             <h2 className="relative text-3xl font-bold">AI Enthusiast</h2>
