@@ -1,9 +1,4 @@
-// import { useEffect, useState } from "react";
-// import { motion, useMotionValue } from "framer-motion";
-// import PropTypes from "prop-types";
-// import { div } from "three/examples/jsm/nodes/Nodes.js";
-
-// import "./testimonial.scss";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -103,12 +98,25 @@ const Testimonial = () => {
       <p className="text-3xl md:text-4xl text-center tracking-tighter font-medium mt-4">
         What Our Clients Think About Us
       </p>
-      <div className="overflow-hidden mt-10 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-        <div className="flex gap-5">
-          {testimonials.map((testimonial) => (
+      <div className="flex overflow-hidden mt-10 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+        <motion.div
+          initial={{
+            translateX: "-50%",
+          }}
+          animate={{
+            translateX: "0",
+          }}
+          transition={{
+            repeat: Infinity,
+            ease: "linear",
+            duration: 100,
+          }}
+          className="flex gap-5 py-4 flex-none"
+        >
+          {[...testimonials, ...testimonials].map((testimonial) => (
             <div
               key={testimonial.id}
-              className="border border-white/15 p-6 md:p-10 rounded-xl bg-[linear-gradient(to_bottom_left,rgb(140,69,255,.3),black)] max-w-sm md:max-w-md flex-none"
+              className="border border-white/15 p-6 md:p-10 rounded-xl bg-[linear-gradient(to_bottom_left,rgb(140,69,255,.3),black)] max-w-sm md:max-w-md flex-none hover:-rotate-3 transition duration-300"
             >
               <div className="flex flex-col justify-between h-full">
                 <div className="text-lg md:text-xl tracking-tight">
@@ -127,7 +135,7 @@ const Testimonial = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

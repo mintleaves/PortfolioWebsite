@@ -48,9 +48,9 @@ const App = () => {
       </section>
 
       {/* Skils has problem */}
-      {/* <section id="Skills">
+      <section id="Skills">
         <Skills />
-      </section> */}
+      </section>
      
     {/* Works has problem */}
       {/* <Works id="Works" /> */}

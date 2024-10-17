@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 import "./navbar.scss";
 
 import homeIcon from "./assets/home.png";
-// import skillsIcon from "./assets/skills.png";
+import skillsIcon from "./assets/skills.png";
 import aboutIcon from "./assets/teamwork.png";
 import worksIcon from "./assets/works.png";
-import serviceIcon from "./assets/services.png";
+// import serviceIcon from "./assets/services.png";
 import testimonialIcon from "./assets/rating.png";
 import contactIcon from "./assets/contact.png";
 import Button from "../ReuseComponents/Button";
@@ -68,13 +68,13 @@ const Navbar = () => {
                   className="h-8 w-8 object-contain aspect-[1/1] hover:scale-110  transition duration-300 ease-in-out"
                 />
               </a>
-              {/* <a href="#Skills" id="nav-skills">
+              <a href="#Skills" id="nav-skills">
                 <img
                   src={skillsIcon}
                   alt="skills_icon"
                   className="h-8 w-8 object-contain aspect-[1/1] hover:scale-110  transition duration-300 ease-in-out"
                 />
-              </a> */}
+              </a>
               <a href="#Works" id="nav-works">
                 <img
                   src={worksIcon}
@@ -82,13 +82,13 @@ const Navbar = () => {
                   className="h-8 w-8 object-contain aspect-[1/1] hover:scale-110  transition duration-300 ease-in-out"
                 />
               </a>
-              <a href="#Services" id="nav-services">
+              {/* <a href="#Services" id="nav-services">
                 <img
                   src={serviceIcon}
                   alt="service_icon"
                   className="h-8 w-8 object-contain aspect-[1/1] hover:scale-110  transition duration-300 ease-in-out"
                 />
-              </a>
+              </a> */}
               <a href="#Testimonials" id="nav-testimonials">
                 <img
                   src={testimonialIcon}

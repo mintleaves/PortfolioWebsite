@@ -27,7 +27,7 @@ const Links = () => {
   const listItems = [
     "Home",
     "About",
-    // "Skills",
+    "Skills",
     "Works",
     "Services",
     "Testimonials",

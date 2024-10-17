@@ -1,15 +1,9 @@
-// import { useEffect } from "react";
 import { motion } from "framer-motion";
-
 import Button from "../ReuseComponents/Button";
 import globe from "./globe.mp4";
-// import { createRandomSparkle, initSparkles } from "./heroBg";
 import "./phero.scss";
 
 const ParallaxHero = () => {
-  // useEffect(() => {
-  //   initSparkles();
-  // }, []);
   return (
     <section className="starBG sky flex items-center justify-center overflow-hidden relative ">
       <div className="star "></div>
@@ -22,8 +16,8 @@ const ParallaxHero = () => {
         <video
           className="w-full h-full object-cover"
           src={globe}
-          autoPlay
-          loop
+          // autoPlay
+          // loop
           muted
         ></video>
       </div>

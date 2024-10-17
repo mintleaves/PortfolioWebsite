@@ -40,7 +40,7 @@ const AboutUs = () => {
       </p>
       <div className="bento-container mt-10">
         <div className="grid h-dvh grid-cols-5 gap-2 grid-rows-4">
-          <div className="col-span-2 row-span-2 border border-gray-200/20 rounded-lg p-6 flex flex-col items-center justify-center text-xl gap-5 bg-gradient-to-r from-[#705d91] via-purple-500 to-[#6128b6] bg-clip-text text-transparent">
+          <div className="col-span-2 row-span-2 border border-white/15 rounded-lg p-6 flex flex-col items-center justify-center text-xl gap-5 bg-gradient-to-r from-[#705d91] via-purple-500 to-[#6128b6] bg-clip-text text-transparent">
             {/* <Lottie
               animationData={laptop}
               loop={true}
@@ -62,7 +62,7 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="col-span-3 row-span-1 border border-gray-200/20 rounded-lg flex flex-col items-center justify-evenly">
+          <div className="col-span-3 row-span-1 border border-white/15 rounded-lg flex flex-col items-center justify-evenly">
             <h2 className="text-3xl">
               Do you want to start a project together?
             </h2>
@@ -72,7 +72,7 @@ const AboutUs = () => {
             </button>
           </div>
 
-          <div className="col-span-1 row-span-2 border border-gray-200/20 rounded-lg overflow-hidden relative ">
+          <div className="col-span-1 row-span-2 border border-white/15 rounded-lg overflow-hidden relative ">
             <div className="absolute top-[200px] left-0 overflow-hidden">
               <video
                 className="w-full h-full object-cover"
@@ -87,8 +87,10 @@ const AboutUs = () => {
             </h2>
           </div>
 
-          <div className="timezone col-span-2 row-span-2 border border-gray-200/20 rounded-lg bg-lime-500"></div>
-          <div className="relative col-span-1 row-span-1 border border-gray-200/20 rounded-lg overflow-hidden flex justify-center items-center group">
+          <div className="timezone col-span-2 row-span-2 border border-white/15 rounded-lg bg-lime-500">
+          <h1>Ui/UX design, powerful CMS, responsive design, secure, our tools and stacks</h1>
+          </div>
+          <div className="relative col-span-1 row-span-1 border border-white/15 rounded-lg overflow-hidden flex justify-center items-center group">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-110 group-hover:rotate-6"
               style={{ backgroundImage: `url(${aiImg})` }}
@@ -97,7 +99,7 @@ const AboutUs = () => {
             <h2 className="relative text-3xl font-bold">AI Enthusiast</h2>
           </div>
 
-          <div className="relative col-span-1 row-span-1 border border-gray-200/20 rounded-lg overflow-hidden flex justify-center items-center group">
+          <div className="relative col-span-1 row-span-1 border border-white/15 rounded-lg overflow-hidden flex justify-center items-center group">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-110 group-hover:rotate-6"
               style={{ backgroundImage: `url(${building})` }}
@@ -105,7 +107,7 @@ const AboutUs = () => {
             <div className="absolute inset-0 bg-black bg-opacity-30"></div>
             <h2 className="relative text-3xl font-bold">3D Maven</h2>
           </div>
-          <div className="relative col-span-1 row-span-1 border border-gray-200/20 rounded-lg overflow-hidden flex justify-center items-center group">
+          <div className="relative col-span-1 row-span-1 border border-white/15 rounded-lg overflow-hidden flex justify-center items-center group">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-110 group-hover:rotate-6"
               style={{ backgroundImage: `url(${seo})` }}
@@ -114,7 +116,7 @@ const AboutUs = () => {
             <h2 className="relative text-3xl font-bold">SEO Strategist</h2>
           </div>
 
-          <div className="relative col-span-1 row-span-1 border border-gray-200/20 rounded-lg overflow-hidden flex justify-center items-center group">
+          <div className="relative col-span-1 row-span-1 border border-white/15 rounded-lg overflow-hidden flex justify-center items-center group">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-110 group-hover:rotate-6"
               style={{ backgroundImage: `url(${fullstack})` }}
@@ -123,7 +125,7 @@ const AboutUs = () => {
             <h2 className="relative text-3xl font-bold">Full Stack Pro</h2>
           </div>
 
-          <div className="relative col-span-1 row-span-1 border border-gray-200/20 rounded-lg overflow-hidden flex justify-center items-center group">
+          <div className="relative col-span-1 row-span-1 border border-white/15 rounded-lg overflow-hidden flex justify-center items-center group">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-110 group-hover:rotate-6"
               style={{ backgroundImage: `url(${hosting})` }}
@@ -133,7 +135,9 @@ const AboutUs = () => {
             <h2 className="relative text-3xl font-bold">Hosting Advisor</h2>
           </div>
 
-          <div className="col-span-2 row-span-1 border border-gray-200/20 rounded-lg bg-pink-800"></div>
+          <div className="col-span-2 row-span-1 border border-white/15 rounded-lg bg-pink-800">
+          <h1>My Blog</h1>
+          </div>
         </div>
       </div>
     </div>
