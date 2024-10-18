@@ -1,4 +1,5 @@
-$sky: #085B87;
+// email button
+$sky: rebeccapurple;
 $button-bg: $sky;
 
 .bubbly-button {
@@ -104,4 +105,199 @@ $button-bg: $sky;
       110% 10%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
+}
+
+// digital watch
+.clock {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: relative;
+  -webkit-box-shadow: inset inset 0px 0px 12px 12px rgba(0, 0, 0, 1),
+    0px 0px 65px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset inset 0px 0px 12px 12px rgba(0, 0, 0, 1),
+    0px 0px 65px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 12px 12px rgba(0, 0, 0, 1),
+    0px 0px 65px 5px rgba(0, 0, 0, 0.5);
+  background: #121113;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-bottom: 110px;
+}
+.clock::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgb(7, 30, 83);
+  background-color: #121113;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.inner-circle {
+  width: 20px;
+  height: 180px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.inner-circle-2 {
+  width: 150px;
+  height: 160px;
+}
+.inner-circle-3 {
+  width: 100px;
+  height: 140px;
+}
+.border-circle {
+  border-radius: 50%;
+  position: absolute;
+  background: transparent;
+  border: 2px solid rgba(8, 47, 223, 0.2);
+  left: 50%;
+  top: 50%;
+  width: 185px;
+  height: 185px;
+  transform: translate(-50%, -50%);
+}
+.border-circle:nth-child(2) {
+  width: 70px;
+  height: 70px;
+}
+.border-circle:nth-child(3) {
+  width: 40px;
+  height: 40px;
+}
+.inner-circle div {
+  position: relative;
+  height: 50%;
+  width: 4px;
+  z-index: 1;
+  border-radius: 5px;
+  display: inline-block;
+  transform-origin: bottom;
+  transform: scale(0.5);
+  z-index: 0;
+  background: rgb(21, 51, 121);
+  background: linear-gradient(
+    90deg,
+    rgb(7, 30, 83) 2%,
+    rgb(40, 35, 100) 50%,
+    rgb(1, 8, 85) 100%
+  );
+}
+.inner-circle-2 div {
+  width: 5px;
+}
+.inner-circle-3 div {
+  width: 7px;
+}
+.clock-number {
+  position: absolute;
+  text-align: center;
+  transform: rotate(calc(var(--i) * 29.7deg));
+  inset: 20px;
+  color: rgb(185, 185, 185);
+}
+
+.clock-number b {
+  font-size: 14px;
+  position: absolute;
+  text-align: center;
+  transform: rotateZ(calc(var(--i) * -30deg));
+  display: inline-block;
+  // opacity: 0.9;
+}
+
+/* digital clock */
+.digital-time-wrap {
+  width: 10px;
+  height: 110%;
+  background-color: #121113;
+  position: absolute;
+  left: 48.5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 0%;
+  animation-timing-function: linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(-6deg);
+    animation-timing-function: ease-in;
+  }
+  25% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: rotate(6deg);
+    animation-timing-function: ease-in;
+  }
+  75% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: rotate(-6deg);
+  }
+}
+#digital-time {
+  width: fit-content;
+  display: flex;
+  padding: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.5);
+  background: #121113;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  color: rgb(185, 185, 185);
+}
+#digital-time div {
+  font-size: 18px;
+  font-weight: bold;
+  width: 40px;
+  text-align: center;
+  position: relative;
+}
+#digital-time div:nth-child(1)::after,
+#digital-time div:nth-child(2)::after {
+  content: ":";
+  position: absolute;
+  right: -4px;
+  opacity: 0.7;
+}
+// #digital-time div:nth-child(4) {
+//   font-size: 14px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+//
+
+// RESPONSIVE LAYOUTS BENTOBOX
+
+.stripe {
+  background: repeating-linear-gradient(
+    to right,
+    #121113,
+    #121113 10px,
+    #000000 10px,
+    #000000 20px
+  );
 }

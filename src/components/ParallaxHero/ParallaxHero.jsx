@@ -4,13 +4,15 @@ import globe from "./globe.mp4";
 import "./phero.scss";
 
 const ParallaxHero = () => {
+  const stars = Array.from({ length: 10 }, (_, i) => (
+    <div key={i} className="star"></div>
+  ));
   return (
     <section className="starBG sky flex items-center justify-center overflow-hidden relative ">
-      <div className="star "></div>
-      {/* <div className="star "></div> */}
-      {/* <div className="star "></div> */}
-      {/* <div className="star "></div> */}
-      <div className="star "></div>
+      <div className="hidden md:block firestar"></div>
+      <div className="firestar"></div>
+      {/* <div className="hidden lg:block shooting-star"></div> */}
+      {stars}
 
       <div className="absolute h-[400px] w-[400px] md:h-[500px] md:w-[500px] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
         <video
