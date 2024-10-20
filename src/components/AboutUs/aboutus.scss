@@ -1,297 +1,43 @@
-// email button
-$sky: rebeccapurple;
-$button-bg: $sky;
-
-.bubbly-button {
-  -webkit-appearance: none;
-  appearance: none;
-  position: relative;
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-
-  &:focus {
-    outline: 0;
-  }
-
-  &:before,
-  &:after {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 140%;
-    height: 100%;
-    left: -20%;
-    z-index: -1000;
-    transition: all ease-in-out 0.5s;
-    background-repeat: no-repeat;
-  }
-
-  &:before {
-    display: none;
-    top: -75%;
-    background-image: radial-gradient(circle, $button-bg 20%, transparent 20%),
-      radial-gradient(circle, transparent 20%, $button-bg 20%, transparent 30%),
-      radial-gradient(circle, $button-bg 20%, transparent 20%),
-      radial-gradient(circle, $button-bg 20%, transparent 20%),
-      radial-gradient(circle, transparent 10%, $button-bg 15%, transparent 20%),
-      radial-gradient(circle, $button-bg 20%, transparent 20%),
-      radial-gradient(circle, $button-bg 20%, transparent 20%),
-      radial-gradient(circle, $button-bg 20%, transparent 20%),
-      radial-gradient(circle, $button-bg 20%, transparent 20%);
-    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%,
-      15% 15%, 10% 10%, 18% 18%;
-    //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
-  }
-
-  &:after {
-    display: none;
-    bottom: -75%;
-    background-image: radial-gradient(circle, $button-bg 20%, transparent 20%),
-      radial-gradient(circle, $button-bg 20%, transparent 20%),
-      radial-gradient(circle, transparent 10%, $button-bg 15%, transparent 20%),
-      radial-gradient(circle, $button-bg 20%, transparent 20%),
-      radial-gradient(circle, $button-bg 20%, transparent 20%),
-      radial-gradient(circle, $button-bg 20%, transparent 20%),
-      radial-gradient(circle, $button-bg 20%, transparent 20%);
-    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%,
-      20% 20%;
-    //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
-  }
-
-  &:active {
-    transform: scale(0.9);
-    background-color: darken($button-bg, 5%);
-    // box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
-  }
-
-  &.animate {
-    &:before {
-      display: block;
-      animation: topBubbles ease-in-out 0.75s forwards;
-    }
-    &:after {
-      display: block;
-      animation: bottomBubbles ease-in-out 0.75s forwards;
-    }
-  }
-}
-
-@keyframes topBubbles {
-  0% {
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
-      40% 90%, 55% 90%, 70% 90%;
-  }
-  50% {
-    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
-      50% 50%, 65% 20%, 90% 30%;
-  }
-  100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
-      50% 40%, 65% 10%, 90% 20%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
-}
-
-@keyframes bottomBubbles {
-  0% {
-    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
-      70% -10%, 70% 0%;
-  }
-  50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
-      105% 0%;
-  }
-  100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
-      110% 10%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
-}
-
-// digital watch
+// DIGITAL WATCH
 .clock {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  position: relative;
-  -webkit-box-shadow: inset inset 0px 0px 12px 12px rgba(0, 0, 0, 1),
-    0px 0px 65px 5px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: inset inset 0px 0px 12px 12px rgba(0, 0, 0, 1),
-    0px 0px 65px 5px rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0px 0px 12px 12px rgba(0, 0, 0, 1),
-    0px 0px 65px 5px rgba(0, 0, 0, 0.5);
-  background: #121113;
   display: flex;
-  justify-content: center;
   align-items: center;
-  // margin-bottom: 110px;
-}
-.clock::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid rgb(7, 30, 83);
-  background-color: #121113;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-.inner-circle {
-  width: 20px;
-  height: 180px;
-  border-radius: 50%;
-  position: absolute;
-  display: flex;
   justify-content: center;
-  align-items: start;
-}
-.inner-circle-2 {
-  width: 150px;
-  height: 160px;
-}
-.inner-circle-3 {
-  width: 100px;
-  height: 140px;
-}
-.border-circle {
-  border-radius: 50%;
-  position: absolute;
-  background: transparent;
-  border: 2px solid rgba(8, 47, 223, 0.2);
-  left: 50%;
-  top: 50%;
-  width: 185px;
-  height: 185px;
-  transform: translate(-50%, -50%);
-}
-.border-circle:nth-child(2) {
-  width: 70px;
-  height: 70px;
-}
-.border-circle:nth-child(3) {
-  width: 40px;
-  height: 40px;
-}
-.inner-circle div {
   position: relative;
-  height: 50%;
-  width: 4px;
-  z-index: 1;
-  border-radius: 5px;
-  display: inline-block;
-  transform-origin: bottom;
-  transform: scale(0.5);
-  z-index: 0;
-  background: rgb(21, 51, 121);
-  background: linear-gradient(
-    90deg,
-    rgb(7, 30, 83) 2%,
-    rgb(40, 35, 100) 50%,
-    rgb(1, 8, 85) 100%
-  );
-}
-.inner-circle-2 div {
-  width: 5px;
-}
-.inner-circle-3 div {
-  width: 7px;
-}
-.clock-number {
-  position: absolute;
+  overflow: hidden;
   text-align: center;
-  transform: rotate(calc(var(--i) * 29.7deg));
-  inset: 20px;
-  color: rgb(185, 185, 185);
+  height: 4vh;
+  font-size: 4vh;
+  font-family: sans-serif;
+  line-height: 4.4vh;
+  // border: 2px solid red;
 }
 
-.clock-number b {
-  font-size: 14px;
-  position: absolute;
-  text-align: center;
-  transform: rotateZ(calc(var(--i) * -30deg));
-  display: inline-block;
-  // opacity: 0.9;
-}
-
-/* digital clock */
-.digital-time-wrap {
-  width: 10px;
-  height: 110%;
-  background-color: #121113;
-  position: absolute;
-  left: 48.5%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  animation-name: rotate;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  transform-origin: 50% 0%;
-  animation-timing-function: linear;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(-6deg);
-    animation-timing-function: ease-in;
-  }
-  25% {
-    transform: rotate(0deg);
-    animation-timing-function: ease-out;
-  }
-  50% {
-    transform: rotate(6deg);
-    animation-timing-function: ease-in;
-  }
-  75% {
-    transform: rotate(0deg);
-    animation-timing-function: ease-out;
-  }
-  100% {
-    transform: rotate(-6deg);
-  }
-}
-#digital-time {
-  width: fit-content;
+.clock > div {
   display: flex;
-  padding: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.5);
-  background: #121113;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  color: rgb(185, 185, 185);
 }
-#digital-time div {
-  font-size: 18px;
-  font-weight: bold;
-  width: 40px;
-  text-align: center;
-  position: relative;
+
+.tick {
+  line-height: 1vh;
 }
-#digital-time div:nth-child(1)::after,
-#digital-time div:nth-child(2)::after {
-  content: ":";
-  position: absolute;
-  right: -4px;
-  opacity: 0.7;
-}
-// #digital-time div:nth-child(4) {
-//   font-size: 14px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
+// .tick-hidden {
+//   opacity: 0;
 // }
-//
+
+.move {
+  animation: move 1s linear;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10vh);
+  }
+}
 
 // RESPONSIVE LAYOUTS BENTOBOX
-
 .stripe {
   background: repeating-linear-gradient(
     to right,

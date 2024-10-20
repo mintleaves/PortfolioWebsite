@@ -85,9 +85,9 @@ const Skills = () => {
         {skillsIcon.map((skill) => (
           <div
             key={skill.id}
-            className="relative h-full bg-slate-800 rounded-3xl p-px before:absolute before:w-60 before:h-60 before:-left-40 before:-top-40 before:bg-slate-400 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:group-hover:opacity-100 before:z-10 before:blur-[100px] after:absolute after:w-96 after:h-96 after:-left-48 after:-top-48 after:bg-slate-500 after:rounded-full after:opacity-0 after:pointer-events-none after:transition-opacity after:duration-500 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:hover:opacity-10 after:z-30 after:blur-[100px] overflow-hidden flex flex-col items-center justify-center flex-grow-0 flex-shrink-0 basis-1/5"
+            className="relative h-full bg-gray-800 rounded-3xl p-px before:absolute before:w-60 before:h-60 before:-left-40 before:-top-40 before:bg-gray-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:group-hover:opacity-100 before:z-10 before:blur-[100px] after:absolute after:w-96 after:h-96 after:-left-48 after:-top-48 after:bg-gray-500 after:rounded-full after:opacity-0 after:pointer-events-none after:transition-opacity after:duration-500 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:hover:opacity-10 after:z-30 after:blur-[100px] overflow-hidden flex flex-col items-center justify-center flex-grow-0 flex-shrink-0 basis-1/5"
           >
-            <div className="relative h-full w-full bg-slate-900 py-4 lg:p-6 lg:pb-8 rounded-[inherit] z-20 overflow-hidden flex flex-col items-center justify-center gap-1 md:gap-3">
+            <div className="relative h-full w-full bg-[#121113]  py-4 lg:p-6 lg:pb-8 rounded-[inherit] z-20 overflow-hidden flex flex-col items-center justify-center gap-1 md:gap-3">
               {/* <!-- Radial gradient --> */}
               {/* <div
                 className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
